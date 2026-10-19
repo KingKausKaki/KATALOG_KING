@@ -30,14 +30,14 @@
     }
   </style>
 </head>
-<body class="bg-slate-100 font-sans text-slate-800 min-h-screen flex flex-col overflow-x-hidden">
+<body class="bg-slate-100 font-sans text-slate-800 min-h-screen flex flex-col">
 
   <!-- ================= HALAMAN 1: LANDING PAGE / LINKTREE ================= -->
-  <div id="view-landing" class="flex-1 flex flex-col items-center justify-start bg-white min-h-screen pb-10 w-full">
+  <div id="view-landing" class="flex-1 flex flex-col items-center justify-start bg-white min-h-screen pb-10">
     
     <!-- FOTO UTAMA / BANNER -->
     <div class="w-full max-w-md bg-slate-200 overflow-hidden shadow-sm relative aspect-[16/10]">
-      <img src="img/kingawal.png" onerror="this.src='https://via.placeholder.com/600x400?text=KING+KAUS+KAKI'" class="w-full h-full object-contain p-2">
+      <img src="img/kingawal.png" onerror="this.src='https://via.placeholder.com/600x400?text=KING+KAUS+KAKI'" class="w-full h-full object-cover">
     </div>
 
     <!-- KONTEN PROFIL & INFO -->
@@ -53,43 +53,53 @@
         <div class="flex items-center gap-2"><span>🚚</span> <span class="font-medium">Pengiriman Medan - Aceh & se-Sumatera</span></div>
       </div>
 
-      <p class="text-xs font-bold text-slate-600 pt-1">👇 Pilih tautan di bawah ini:</p>
+      <p class="text-xs font-bold text-slate-600 pt-1">👇 Pilih tautan di bawah ini 👇</p>
 
-      <!-- TOMBOL-TOMBOL MENU UTAMA -->
+      <!-- TOMBOL-TOMBOL MENU UTAMA DENGAN WARNA SESUAI APLIKASI -->
       <div class="space-y-2.5 pt-1">
+        
+        <!-- MASUK KE KATALOG PESANAN (WARNA KHUSUS KING KAUS KAKI) -->
         <button onclick="goToApp()" class="w-full bg-blue-900 hover:bg-blue-800 text-amber-400 border-2 border-amber-400 font-black py-3 px-4 rounded-xl shadow-md text-xs flex items-center justify-center gap-2 transition active:scale-95">
-          <span>🛒</span> BUKA KATALOG & ORDER GROSIR
+          <span>🛒</span> BUKA KATALOG KING
         </button>
 
+        <!-- WHATSAPP (WARNA HIJAU EMERALD) -->
         <a href="https://wa.me/6285176757424" target="_blank" class="w-full bg-white hover:bg-emerald-50 text-emerald-600 border-2 border-emerald-500 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
           <span>💬</span> WHATSAPP
         </a>
 
+        <!-- TIKTOK (WARNA HITAM) -->
         <a href="https://www.tiktok.com/@kingkauskaki" target="_blank" class="w-full bg-white hover:bg-slate-100 text-slate-900 border-2 border-slate-900 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
           <span>🎵</span> TIKTOK
         </a>
 
+        <!-- INSTAGRAM (WARNA ROSE / PINK) -->
         <a href="https://www.instagram.com/kingkauskaki" target="_blank" class="w-full bg-white hover:bg-rose-50 text-rose-600 border-2 border-rose-500 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
           <span>📸</span> INSTAGRAM
         </a>
 
+        <!-- FACEBOOK (WARNA BIRU FACEBOOK) -->
         <a href="https://www.facebook.com/kingkauskaki" target="_blank" class="w-full bg-white hover:bg-blue-50 text-blue-600 border-2 border-blue-600 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
           <span>👥</span> FACEBOOK
         </a>
 
-        <a href="https://maps.google.com/?q=Medan" target="_blank" class="w-full bg-white hover:bg-red-50 text-red-600 border-2 border-red-500 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
+        <!-- ALAMAT GOOGLE MAPS (WARNA MERAH MAPS) -->
+        <a href="https://maps.app.goo.gl/Xk1WiWPVFU6ADHfe7" target="_blank" class="w-full bg-white hover:bg-red-50 text-red-600 border-2 border-red-500 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
           <span>📍</span> ALAMAT KING KAUSKAKI
         </a>
+
       </div>
     </div>
   </div>
 
 
   <!-- ================= APLIKASI UTAMA (KATALOG & KERANJANG) ================= -->
-  <div id="main-app-container" style="display: none;" class="flex-1 flex flex-col min-h-screen pb-16 w-full">
+  <div id="main-app-container" style="display: none;" class="flex-1 flex flex-col min-h-screen pb-16">
 
     <!-- HEADER UTAMA -->
-    <header class="bg-white text-slate-800 px-3 py-2 border-b sticky top-0 z-40 shadow-sm flex items-center justify-between gap-2 w-full">
+    <header class="bg-white text-slate-800 px-3 py-2 border-b sticky top-0 z-40 shadow-sm flex items-center justify-between gap-2">
+      
+      <!-- KIRI: TOMBOL KEMBALI KE HALAMAN UTAMA & LOGO -->
       <div class="flex items-center gap-2 shrink-0">
         <button onclick="backToLanding()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 p-1.5 rounded-xl text-xs font-bold flex items-center gap-1 transition border" title="Kembali ke Beranda">
           <span>🏠</span>
@@ -97,16 +107,16 @@
         <div class="bg-blue-900 text-amber-400 p-1.5 rounded-xl font-black text-xs">👑</div>
         <div>
           <h2 class="text-xs sm:text-sm font-black tracking-wider text-slate-900 uppercase">KING KAUS KAKI</h2>
-          <p class="text-[8px] sm:text-[9px] text-slate-500 font-semibold">Jl.Sutomo No.264/640,Pandau Hilir,Kec.Medan perjuangan,Kota Medan,Sumatera Utara 20232
-</p>
+          <p class="text-[8px] sm:text-[9px] text-slate-500 font-semibold">Jl.Sutomo No.264/640,Pandau Hilir,Kec.Medan perjuangan,Kota Medan,Sumatera Utara 20232</p>
         </div>
       </div>
 
+      <!-- KANAN: PENCARIAN & KERANJANG -->
       <div class="flex items-center gap-1.5 shrink-0">
         <div class="relative flex items-center">
           <input type="text" id="search-input" oninput="renderProducts()" placeholder="Cari barang..." 
-            class="w-24 sm:w-48 bg-slate-100 border rounded-full pl-7 pr-2 py-1 text-xs font-medium text-slate-700 transition-all focus:outline-none focus:border-blue-600 focus:bg-white">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-slate-500 absolute left-2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            class="w-8 focus:w-36 sm:focus:w-48 bg-slate-100 border rounded-full pl-8 pr-2 py-1 text-xs font-medium text-slate-700 transition-all duration-300 focus:outline-none focus:border-blue-600 focus:bg-white cursor-pointer focus:cursor-text">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-500 absolute left-2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
         </div>
@@ -147,27 +157,27 @@
     </aside>
 
     <!-- TAMPILAN KASIR / KATALOG -->
-    <div id="view-kasir" class="flex-1 flex flex-col pb-16 w-full">
-      <div class="bg-gradient-to-r from-pink-100 via-rose-50 to-amber-50 p-3 border-b border-pink-200 text-center w-full">
-        <div class="w-full space-y-0.5">
-          <span class="text-[9px] font-bold tracking-widest text-rose-600 uppercase bg-rose-100 px-2 py-0.5 rounded-full">KATALOG KING KAUS KAKI</span>
+    <div id="view-kasir" class="flex-1 flex flex-col pb-16">
+      <div class="bg-gradient-to-r from-pink-100 via-rose-50 to-amber-50 p-3 border-b border-pink-200 text-center">
+        <div class="max-w-xl mx-auto space-y-0.5">
+          <span class="text-[9px] font-bold tracking-widest text-rose-600 uppercase bg-rose-100 px-2 py-0.5 rounded-full">KATALOG KING</span>
           <h3 class="text-xs font-black text-slate-800 uppercase">PUSAT GROSIR KAUS KAKI TERLENGKAP</h3>
         </div>
       </div>
 
       <!-- SLIDER PRODUK TERLARIS -->
-      <div class="bg-white p-2.5 border-b w-full">
+      <div class="bg-white p-3 border-b">
         <div class="flex items-center justify-between mb-1.5">
           <h4 class="font-black text-xs uppercase tracking-wider text-amber-600 flex items-center gap-1">
-            <span>🔥</span> Produk Terlaris (A-Z)
+            <span>🔥</span> Produk Terlaris 
           </h4>
         </div>
-        <div id="best-seller-slider" class="flex gap-2 overflow-x-auto pb-1 custom-scroll whitespace-nowrap w-full"></div>
+        <div id="best-seller-slider" class="flex gap-2.5 overflow-x-auto pb-1 custom-scroll whitespace-nowrap"></div>
       </div>
 
       <!-- FILTER LABEL BARANG -->
-      <div class="bg-slate-50 px-2.5 py-2 border-b w-full">
-        <div class="flex items-center gap-1.5 overflow-x-auto pb-0.5 custom-scroll whitespace-nowrap text-[11px]">
+      <div class="bg-slate-50 px-3 py-2 border-b">
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 custom-scroll whitespace-nowrap text-[11px]">
           <span class="font-bold text-slate-500 mr-1 text-[10px]">Filter:</span>
           <button onclick="setFilterTag('semua')" id="tag-semua" class="px-2.5 py-1 rounded-full bg-blue-600 text-white font-bold transition shadow-sm">Semua</button>
           <button onclick="setFilterTag('obral')" id="tag-obral" class="px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100">🏷️ Obral (< Rp 45rb)</button>
@@ -177,17 +187,16 @@
         </div>
       </div>
 
-      <!-- MAIN GRID PRODUK (MEMENUHI LAYAR HP) -->
-      <main class="flex-1 p-2 bg-slate-100 w-full">
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 w-full" id="product-grid"></div>
+      <main class="flex-1 p-2 sm:p-3 bg-slate-100">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5" id="product-grid"></div>
       </main>
     </div>
 
     <!-- TAMPILAN KERANJANG -->
-    <div id="view-keranjang" class="flex-1 p-3 bg-slate-50 w-full pb-20" style="display: none;">
-      <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col space-y-3 p-4 max-w-3xl mx-auto w-full">
+    <div id="view-keranjang" class="flex-1 p-3 sm:p-6 bg-slate-50 max-w-3xl mx-auto w-full pb-20" style="display: none;">
+      <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col space-y-3 p-4">
         <div class="flex justify-between items-center border-b pb-3">
-          <h2 class="text-sm font-bold flex items-center gap-1.5"><span>🛒</span> Daftar Pesanan (Lusin)</h2>
+          <h2 class="text-sm sm:text-base font-bold flex items-center gap-1.5"><span>🛒</span> Daftar Pesanan (Lusin)</h2>
           <button onclick="clearCart()" class="text-[11px] bg-red-50 hover:bg-red-100 text-red-600 px-2.5 py-1 rounded-lg font-semibold transition border border-red-200">Kosongkan Keranjang</button>
         </div>
 
@@ -203,7 +212,7 @@
               <input type="text" id="input-customer-name" oninput="removeShake(this)" placeholder="Ketik nama toko/pemesan..." class="w-full bg-white border rounded-lg px-2.5 py-1.5 text-xs focus:outline-blue-600 font-semibold uppercase">
             </div>
             <div>
-              <label class="block text-[10px] font-bold text-slate-700 mb-1">Tempat / Kota Tujuan: <span class="text-red-500">*</span></label>
+              <label class="block text-[10px] font-bold text-slate-700 mb-1">Tempat / Kota Tujuan (Pengiriman Medan): <span class="text-red-500">*</span></label>
               <input type="text" id="input-customer-place" oninput="removeShake(this); calculateEstimatedOngkir();" placeholder="Ketik kota tujuan..." class="w-full bg-white border rounded-lg px-2.5 py-1.5 text-xs focus:outline-blue-600 font-semibold uppercase">
             </div>
           </div>
@@ -242,9 +251,9 @@
     </div>
 
     <!-- TAMPILAN RIWAYAT -->
-    <div id="view-laporan" class="flex-1 p-3 bg-slate-50 pb-20 w-full" style="display: none;">
-      <div class="max-w-6xl mx-auto space-y-4 w-full">
-        <div class="bg-white rounded-xl shadow p-3">
+    <div id="view-laporan" class="flex-1 p-4 bg-slate-50 pb-20" style="display: none;">
+      <div class="max-w-6xl mx-auto space-y-4">
+        <div class="bg-white rounded-xl shadow p-4">
           <div class="flex justify-between items-center mb-3 pb-2 border-b">
             <h2 class="text-sm font-bold text-slate-800">📋 Riwayat Orderan Lokal</h2>
             <button onclick="clearAllTransactions()" class="text-[10px] bg-red-50 text-red-600 px-2.5 py-1 rounded border border-red-200 hover:bg-red-100 font-semibold">Hapus Riwayat</button>
@@ -265,7 +274,7 @@
           </div>
         </div>
 
-        <div id="bon-detail-card" class="bg-white rounded-xl shadow p-3" style="display: none;">
+        <div id="bon-detail-card" class="bg-white rounded-xl shadow p-4" style="display: none;">
           <div class="flex justify-between items-center mb-3 pb-2 border-b">
             <div>
               <h3 class="text-xs font-bold text-blue-900" id="detail-bon-title">Rincian Order</h3>
@@ -288,7 +297,7 @@
     </div>
 
     <!-- BOTTOM NAVIGATION BAR -->
-    <nav id="bottom-nav" class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-lg z-40 flex justify-around items-center h-14 px-2 transition-transform duration-300 w-full">
+    <nav id="bottom-nav" class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-lg z-40 flex justify-around items-center h-14 px-2 transition-transform duration-300">
       <button onclick="switchTab('kasir')" id="tab-kasir" class="flex flex-col items-center justify-center flex-1 text-blue-700 font-bold transition">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -333,17 +342,17 @@
     const WHATSAPP_NUMBER = "6285176757424"; 
 
     const sidebarCategoryData = [
-      { name: "Semua", group: "semua", img: "img/logo.png" },
-      { name: "SEKOLAH", group: "sekolah", img: "img/FINI_HITAM.png" },
-      { name: "BABY", group: "sekolah", img: "img/ARVIO_HITAM.png" },
-      { name: "DWS KANTOR", group: "dewasa", img: "img/TCHW.png" },
-      { name: "DWS KASUAL", group: "dewasa", img: "img/KAKIBRO_CATUR.png" },
-      { name: "MUSLIM", group: "dewasa", img: "img/SCP_PUTIH.png" },
-      { name: "SPORT", group: "dewasa", img: "img/FLEXIBALL.png" },
-      { name: "HANDSOCK", group: "dewasa", img: "img/SCPW_WARNA.png" }
+      { name: "SEMUA", group: "SEMUA", img: "img/logo.png" },
+      { name: "SEKOLAH", group: "SEKOLAH", img: "img/FINI_HITAM.png" },
+      { name: "BABY", group: "BABY", img: "img/ARVIO_HITAM.png" },
+      { name: "KANTOR", group: "dewasa", img: "img/TCHW.png" },
+      { name: "KASUAL", group: "dewasa", img: "img/KAKIBRO_CATUR.png" },
+      { name: "MUSLIM", group: "MUSLIM", img: "img/SCP_PUTIH.png" },
+      { name: "SPORT", group: "SPORT", img: "img/FLEXIBALL.png" },
+      { name: "HANDSOCK", group: "HANDSOCK", img: "img/YUTAKA_MANSET_HITAM.png" },
+      { name: "SARUNG TANGAN", group: "SRT", img: "img/YUTAKA_SRT_HT.png" }
     ];
 
-    /* DATA PRODUK LENGKAP - PERBAIKAN HARGA DISEMUA PRODUK FINI JPL */
     const products = [
       { 
         id: 101, 
@@ -563,9 +572,65 @@
         ]
       },
       { 
+        id: 201, 
+        name: "YUTAKA MANSET", 
+        category: "HANDSOCK",
+        priceDisplay: "70RB AN",
+        minPrice: 73000,
+        maxPrice: 730000, 
+        isBestSeller: true, 
+        desc: "MANSET TANGAN.",
+        mainImg: "img/YUTAKA_MANSET_HITAM.png",
+        variants: [
+          { 
+            name: "YUTAKA MANSET HITAM", 
+            img: "img/YUTAKA_MANSET_HITAM.png",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "YUTAKA MANSET PUTIH", 
+            img: "img/YUTAKA_MANSET_PT.png",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "YUTAKA MANSET COKLAT", 
+            img: "img/YUTAKA_MANSET_CK.png",
+            subVariants: ["FREE SIZE"] 
+          }
+        ]
+      },
+      { 
+        id: 202, 
+        name: "JAMIILATUN HANDSOCKS", 
+        category: "HANDSOCK", 
+        priceDisplay: "50RB AN",
+        minPrice: 55000,
+        maxPrice: 55000,
+        isBestSeller: true, 
+        desc: "HANDSOCKS.",
+        mainImg: "img/JAMIILATUN_HDS_PT.png",
+        variants: [
+          { 
+            name: "JAMIILATUN HDS PUTIH", 
+            img: "img/JAMIILATUN_HDS_PT.png",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "JAMIILATUN HDS HITAM", 
+            img: "img/JAMIILATUN_HDS_HT.png",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "JAMIILATUN HDS CREAM", 
+            img: "img/JAMIILATUN_HDS_CR.png",
+            subVariants: ["FREE SIZE"] 
+          }
+        ]
+      },
+      { 
         id: 301, 
         name: "YUTAKA SRT HITAM", 
-        category: "SRT", 
+        category: "SARUNG TANGAN", 
         priceDisplay: "80RB AN",
         minPrice: 80000,
         maxPrice: 80000,
@@ -588,7 +653,7 @@
       { 
         id: 302, 
         name: "YUTAKA SRT MISTY", 
-        category: "SRT", 
+        category: "SARUNG TANGAN", 
         priceDisplay: "80RB AN",
         minPrice: 80000,
         maxPrice: 80000,
@@ -611,7 +676,7 @@
         { 
         id: 303, 
         name: "YUTAKA SRT PUTIH", 
-        category: "SRT", 
+        category: "SARUNG TANGAN", 
         priceDisplay: "80RB AN",
         minPrice: 80000,
         maxPrice: 80000,
@@ -966,62 +1031,6 @@
           },
         ]
       },
-            { 
-        id: 201, 
-        name: "YUTAKA MANSET", 
-        category: "HANDSOCK",
-        priceDisplay: "70RB AN",
-        minPrice: 73000,
-        maxPrice: 730000, 
-        isBestSeller: true, 
-        desc: "MANSET TANGAN.",
-        mainImg: "img/YUTAKA_MANSET_HITAM.png",
-        variants: [
-          { 
-            name: "YUTAKA MANSET HITAM", 
-            img: "img/YUTAKA_MANSET_HITAM.png",
-            subVariants: ["FREE SIZE"] 
-          },
-          { 
-            name: "YUTAKA MANSET PUTIH", 
-            img: "img/YUTAKA_MANSET_PT.png",
-            subVariants: ["FREE SIZE"] 
-          },
-          { 
-            name: "YUTAKA MANSET COKLAT", 
-            img: "img/YUTAKA_MANSET_CK.png",
-            subVariants: ["FREE SIZE"] 
-          }
-        ]
-      },
-      { 
-        id: 202, 
-        name: "JAMIILATUN HANDSOCKS", 
-        category: "HANDSOCK", 
-        priceDisplay: "50RB AN",
-        minPrice: 55000,
-        maxPrice: 55000,
-        isBestSeller: true, 
-        desc: "HANDSOCKS.",
-        mainImg: "img/JAMIILATUN_HDS_PT.png",
-        variants: [
-          { 
-            name: "JAMIILATUN HDS PUTIH", 
-            img: "img/JAMIILATUN_HDS_PT.png",
-            subVariants: ["FREE SIZE"] 
-          },
-          { 
-            name: "JAMIILATUN HDS HITAM", 
-            img: "img/JAMIILATUN_HDS_HT.png",
-            subVariants: ["FREE SIZE"] 
-          },
-          { 
-            name: "JAMIILATUN HDS CREAM", 
-            img: "img/JAMIILATUN_HDS_CR.png",
-            subVariants: ["FREE SIZE"] 
-          }
-        ]
-      },
     ].sort((a, b) => a.name.localeCompare(b.name));
 
     let cart = JSON.parse(localStorage.getItem('king_cart_items')) || [];
@@ -1204,22 +1213,21 @@
       slider.innerHTML = bestSellerProducts.map(p => {
         const orderedTotal = getProductOrderedTotal(p.id);
         return `
-          <div onclick="openProductDetail(${p.id})" class="bg-white rounded-xl p-2 shadow-sm border border-amber-200 hover:border-amber-400 transition-all cursor-pointer flex flex-col justify-between shrink-0 w-32 relative group">
+          <div onclick="openProductDetail(${p.id})" class="bg-white rounded-xl p-2 shadow-sm border border-amber-200 hover:border-amber-400 transition-all cursor-pointer flex flex-col justify-between shrink-0 w-36 relative group">
             ${orderedTotal > 0 ? `<span class="absolute top-1.5 right-1.5 bg-blue-600 text-white text-[9px] font-black px-1.5 py-0.2 rounded-full shadow z-10">${orderedTotal} Lsn</span>` : ''}
             <div class="relative w-full h-24 bg-white rounded-lg p-0.5 flex items-center justify-center overflow-hidden border border-slate-100">
-              <img src="${p.mainImg}" onerror="this.src='https://via.placeholder.com/150?text=${encodeURIComponent(p.name)}'" class="w-full h-full object-contain p-1 rounded transition-transform duration-300 group-hover:scale-105">
+              <img src="${p.mainImg}" onerror="this.src='https://via.placeholder.com/150?text=${encodeURIComponent(p.name)}'" class="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105">
               <span class="absolute top-1 left-1 bg-amber-500 text-white text-[7px] font-bold px-1 rounded shadow">★ Best</span>
             </div>
             <div class="pt-1.5 text-center">
               <h4 class="font-bold text-[11px] text-slate-800 truncate">${p.name}</h4>
-              <span class="text-[10px] font-black text-rose-600 block">${p.priceDisplay || '-'}</span>
+              <span class="text-[10px] font-black text-rose-600 block">${p.priceDisplay}</span>
             </div>
           </div>
         `;
       }).join('');
     }
 
-    /* FUNGSI TAMPILAN KATALOG PRODUK YANG SUDAH DIPERBAIKI */
     function renderProducts() {
       const grid = document.getElementById('product-grid');
       const keyword = document.getElementById('search-input').value.toLowerCase();
@@ -1240,22 +1248,20 @@
 
       grid.innerHTML = filtered.map(p => {
         const orderedTotal = getProductOrderedTotal(p.id);
-        const displayPrice = p.priceDisplay ? p.priceDisplay : 'Lihat Detail';
-
         return `
-          <div onclick="openProductDetail(${p.id})" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 flex flex-col justify-between relative group cursor-pointer transition w-full">
+          <div onclick="openProductDetail(${p.id})" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 flex flex-col justify-between relative group cursor-pointer transition">
             ${orderedTotal > 0 ? `<span class="absolute top-1.5 left-1.5 bg-blue-600 text-white text-[9px] font-black px-1.5 py-0.2 rounded-full shadow-md z-10">${orderedTotal} Lsn</span>` : ''}
-            <div class="relative w-full aspect-square bg-white flex items-center justify-center overflow-hidden p-1 border-b border-slate-100">
-              <img src="${p.mainImg}" onerror="this.src='https://via.placeholder.com/250x300?text=${encodeURIComponent(p.name)}'" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+            <div class="relative w-full aspect-[4/5] bg-slate-50 flex items-center justify-center overflow-hidden">
+              <img src="${p.mainImg}" onerror="this.src='https://via.placeholder.com/250x300?text=${encodeURIComponent(p.name)}'" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
               ${p.isBestSeller ? '<span class="absolute top-1.5 right-1.5 bg-amber-500 text-white text-[7px] font-black px-1 rounded shadow">★ BEST</span>' : ''}
             </div>
             <div class="p-2 flex flex-col justify-between flex-1">
               <div>
-                <h3 class="font-bold text-[11px] sm:text-xs text-slate-800 line-clamp-2 leading-tight">${p.name}</h3>
+                <h3 class="font-semibold text-[11px] sm:text-xs text-slate-800 line-clamp-2 leading-tight">${p.name}</h3>
                 <p class="text-[9px] text-slate-400 font-medium mt-0.5">${p.category}</p>
               </div>
-              <div class="mt-2 flex items-center justify-between border-t pt-1.5">
-                <span class="text-[11px] font-black text-rose-600">${displayPrice}</span>
+              <div class="mt-1.5 flex items-center justify-between">
+                <span class="text-[11px] font-black text-rose-600">${p.priceDisplay}</span>
                 <span class="text-[9px] ${orderedTotal > 0 ? 'text-emerald-700 font-bold' : 'text-blue-600 font-bold'}">${orderedTotal > 0 ? `✔ ${orderedTotal} Lsn` : 'Pilih ➔'}</span>
               </div>
             </div>
@@ -1335,14 +1341,12 @@
                 <span class="bg-blue-50 text-blue-700 text-[10px] px-2 py-0.5 rounded-full font-bold">${p.category}</span>
                 <h2 class="font-black text-base text-slate-900 mt-0.5">${p.name}</h2>
               </div>
-              
               <div class="bg-slate-50 p-1.5 rounded-xl border border-slate-200 flex flex-col items-center justify-center overflow-hidden">
-                <div class="w-full h-44 rounded-lg overflow-hidden bg-white border shadow-sm flex items-center justify-center p-1">
-                  <img src="${v.img}" onerror="this.src='https://via.placeholder.com/300?text=${encodeURIComponent(v.name)}'" class="w-full h-full object-contain">
+                <div class="w-full h-36 rounded-lg overflow-hidden bg-white border shadow-sm">
+                  <img src="${v.img}" onerror="this.src='https://via.placeholder.com/300?text=${encodeURIComponent(v.name)}'" class="w-full h-full object-cover">
                 </div>
                 <span class="text-[10px] font-black text-slate-800 mt-1 bg-white px-2 py-0.5 rounded-full border uppercase shadow-sm">${v.name}</span>
               </div>
-
               <div class="bg-slate-50 p-2 rounded-xl border border-slate-200 space-y-1.5">
                 <label class="block text-[10px] font-bold text-blue-900 uppercase">PILIH UKURAN:</label>
                 <div class="max-h-28 overflow-y-auto space-y-1 pr-0.5 custom-scroll">${sizesHTML}</div>
@@ -1457,7 +1461,7 @@
       }
       cartContainer.innerHTML = cart.map(item => `
         <div class="flex items-center justify-between bg-slate-50 p-2.5 rounded-xl border border-slate-200">
-          <img src="${item.img}" onerror="this.src='https://via.placeholder.com/50'" class="w-10 h-10 object-contain p-0.5 rounded-lg bg-white border mr-2">
+          <img src="${item.img}" onerror="this.src='https://via.placeholder.com/50'" class="w-10 h-10 object-contain rounded-lg bg-white border p-0.5 mr-2">
           <div class="flex-1 pr-2">
             <h4 class="font-bold text-xs text-slate-800">${item.name}</h4>
             <p class="text-[9px] text-blue-600 font-semibold">${item.category}</p>
@@ -1539,7 +1543,7 @@
       document.getElementById('detail-bon-date').innerText = `Waktu: ${tx.date}`;
       document.getElementById('detail-bon-body').innerHTML = tx.items.map(item => `
         <tr>
-          <td class="p-2"><img src="${item.img}" onerror="this.src='https://via.placeholder.com/40'" class="w-7 h-7 object-contain p-0.5 rounded border"></td>
+          <td class="p-2"><img src="${item.img}" onerror="this.src='https://via.placeholder.com/40'" class="w-7 h-7 object-contain rounded border"></td>
           <td class="p-2 font-bold text-slate-800">${item.name}</td>
           <td class="p-2 text-center font-bold text-blue-600">${item.qty} Lusin</td>
         </tr>
