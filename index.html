@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>KING KAUS KAKI - Pusat Grosir Kaus Kaki se-Sumatera</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { user-select: none; -webkit-user-select: none; }
+    .custom-scroll::-webkit-scrollbar { height: 4px; width: 4px; }
+    .custom-scroll::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 8px; }
+    .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 8px; }
+    .snap-x-mandatory { scroll-snap-type: x mandatory; }
+    
+    .variant-full-card-slide {
+      scroll-snap-align: center;
+      flex: 0 0 100%;
+      width: 100%;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-5px); }
+      40%, 80% { transform: translateX(5px); }
+    }
+    .shake-input {
+      animation: shake 0.4s ease-in-out;
+      border-color: #ef4444 !important;
+      background-color: #fef2f2 !important;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 min-h-screen flex flex-col">
+
+  <!-- ================= HALAMAN 1: LANDING PAGE / LINKTREE ================= -->
+  <div id="view-landing" class="flex-1 flex flex-col items-center justify-start bg-white min-h-screen pb-10">
+    
+    <!-- FOTO UTAMA / BANNER -->
+    <div class="w-full max-w-md bg-slate-200 overflow-hidden shadow-sm relative aspect-[16/10]">
+      <img src="img/kingawal.png" onerror="this.src='https://via.placeholder.com/600x400?text=KING+KAUS+KAKI'" class="w-full h-full object-cover">
+    </div>
+
+    <!-- KONTEN PROFIL & INFO -->
+    <div class="w-full max-w-md px-5 pt-5 pb-6 text-center space-y-3">
+      <div>
+        <p class="text-[11px] font-bold tracking-widest text-slate-500 uppercase">KING KAUSKAKI MEDAN</p>
+        <h1 class="text-lg font-black text-slate-900 tracking-tight mt-0.5">Pusat Grosir Kauskaki se-Sumatera</h1>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-3 text-xs text-slate-700 space-y-1.5 shadow-sm text-left">
+        <div class="flex items-center gap-2"><span>✅</span> <span class="font-medium">Kaus Kaki | Manset | Sarung Tangan</span></div>
+        <div class="flex items-center gap-2"><span>📦</span> <span class="font-medium">Melayani Toko Reseller & Partai Besar</span></div>
+        <div class="flex items-center gap-2"><span>🚚</span> <span class="font-medium">Pengiriman Medan - Aceh & se-Sumatera</span></div>
+      </div>
+
+      <p class="text-xs font-bold text-slate-600 pt-1">👇 Pilih tautan di bawah ini 👇</p>
+
+      <!-- TOMBOL-TOMBOL MENU UTAMA DENGAN WARNA SESUAI APLIKASI -->
+      <div class="space-y-2.5 pt-1">
+        
+        <!-- MASUK KE KATALOG PESANAN (WARNA KHUSUS KING KAUS KAKI) -->
+        <button onclick="goToApp()" class="w-full bg-blue-900 hover:bg-blue-800 text-amber-400 border-2 border-amber-400 font-black py-3 px-4 rounded-xl shadow-md text-xs flex items-center justify-center gap-2 transition active:scale-95">
+          <span>🛒</span> BUKA KATALOG KING
+        </button>
+
+        <!-- WHATSAPP (WARNA HIJAU EMERALD) -->
+        <a href="https://wa.me/6285176757424" target="_blank" class="w-full bg-white hover:bg-emerald-50 text-emerald-600 border-2 border-emerald-500 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
+          <span>💬</span> WHATSAPP
+        </a>
+
+        <!-- TIKTOK (WARNA HITAM) -->
+        <a href="https://www.tiktok.com/@kingkauskaki" target="_blank" class="w-full bg-white hover:bg-slate-100 text-slate-900 border-2 border-slate-900 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
+          <span>🎵</span> TIKTOK
+        </a>
+
+        <!-- INSTAGRAM (WARNA ROSE / PINK) -->
+        <a href="https://www.instagram.com/kingkauskaki" target="_blank" class="w-full bg-white hover:bg-rose-50 text-rose-600 border-2 border-rose-500 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
+          <span>📸</span> INSTAGRAM
+        </a>
+
+        <!-- FACEBOOK (WARNA BIRU FACEBOOK) -->
+        <a href="https://www.facebook.com/kingkauskaki" target="_blank" class="w-full bg-white hover:bg-blue-50 text-blue-600 border-2 border-blue-600 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
+          <span>👥</span> FACEBOOK
+        </a>
+
+        <!-- ALAMAT GOOGLE MAPS (WARNA MERAH MAPS) -->
+        <a href="https://maps.app.goo.gl/Xk1WiWPVFU6ADHfe7" target="_blank" class="w-full bg-white hover:bg-red-50 text-red-600 border-2 border-red-500 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
+          <span>📍</span> ALAMAT KING KAUSKAKI
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================= APLIKASI UTAMA (KATALOG & KERANJANG) ================= -->
+  <div id="main-app-container" style="display: none;" class="flex-1 flex flex-col min-h-screen pb-16">
+
+    <!-- HEADER UTAMA -->
+    <header class="bg-white text-slate-800 px-3 py-2 border-b sticky top-0 z-40 shadow-sm flex items-center justify-between gap-2">
+      
+      <!-- KIRI: TOMBOL KEMBALI KE HALAMAN UTAMA & LOGO -->
+      <div class="flex items-center gap-2 shrink-0">
+        <button onclick="backToLanding()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 p-1.5 rounded-xl text-xs font-bold flex items-center gap-1 transition border" title="Kembali ke Beranda">
+          <span>🏠</span>
+        </button>
+        <div class="bg-blue-900 text-amber-400 p-1.5 rounded-xl font-black text-xs">👑</div>
+        <div>
+          <h2 class="text-xs sm:text-sm font-black tracking-wider text-slate-900 uppercase">KING KAUS KAKI</h2>
+          <p class="text-[8px] sm:text-[9px] text-slate-500 font-semibold">Jl. Sutomo No.264/640, Pandau Hilir, Kec. Medan perjuangan, Kota Medan, Sumatera Utara 20232, Indonesia</p>
+        </div>
+      </div>
+
+      <!-- KANAN: PENCARIAN & KERANJANG -->
+      <div class="flex items-center gap-1.5 shrink-0">
+        <div class="relative flex items-center">
+          <input type="text" id="search-input" oninput="renderProducts()" placeholder="Cari barang..." 
+            class="w-8 focus:w-36 sm:focus:w-48 bg-slate-100 border rounded-full pl-8 pr-2 py-1 text-xs font-medium text-slate-700 transition-all duration-300 focus:outline-none focus:border-blue-600 focus:bg-white cursor-pointer focus:cursor-text">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-500 absolute left-2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+
+        <button onclick="switchTab('keranjang')" class="bg-blue-50 hover:bg-blue-100 text-blue-900 p-1.5 sm:px-2.5 sm:py-1 rounded-xl text-xs font-bold flex items-center gap-1 transition border border-blue-200">
+          <span>🛒</span>
+          <span id="header-cart-count" class="bg-blue-600 text-white px-1.5 py-0.2 rounded-full text-[10px]">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- SIDEBAR MENU KATEGORI -->
+    <div id="sidebar-overlay" onclick="closeSidebarMenu()" class="fixed inset-0 bg-black/60 z-50 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+
+    <aside id="sidebar-panel" class="fixed top-0 left-0 bottom-0 w-[85%] max-w-md bg-white z-50 shadow-2xl transition-transform duration-300 -translate-x-full flex flex-col">
+      <div class="p-4 border-b flex items-center justify-between bg-slate-50">
+        <div class="flex items-center gap-2">
+          <div class="bg-blue-900 text-amber-400 p-1.5 rounded-xl font-black text-xs">👑</div>
+          <span class="font-black text-sm text-slate-900 uppercase tracking-wider">Kategori Produk</span>
+        </div>
+        <button onclick="closeSidebarMenu()" class="w-8 h-8 rounded-full bg-slate-200 hover:bg-slate-300 font-bold text-slate-700 flex items-center justify-center transition">✕</button>
+      </div>
+
+      <div class="flex border-b text-xs font-bold bg-white overflow-x-auto custom-scroll">
+        <button onclick="filterSidebarGroup('semua')" id="tab-group-semua" class="flex-1 py-3 px-3 text-center border-b-2 border-blue-600 text-blue-600 whitespace-nowrap">Semua Kategori</button>
+        <button onclick="filterSidebarGroup('sekolah')" id="tab-group-sekolah" class="flex-1 py-3 px-3 text-center border-b-2 border-transparent text-slate-500 whitespace-nowrap">Anak & Sekolah</button>
+        <button onclick="filterSidebarGroup('dewasa')" id="tab-group-dewasa" class="flex-1 py-3 px-3 text-center border-b-2 border-transparent text-slate-500 whitespace-nowrap">Dewasa</button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto custom-scroll p-3 space-y-1.5" id="sidebar-category-list"></div>
+
+      <div class="p-4 border-t bg-slate-50 text-center space-y-2">
+        <p class="text-[11px] text-slate-500 font-medium">Butuh Bantuan / Tanya CS?</p>
+        <a href="https://wa.me/6285176757424" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition">
+          <span>💬</span> Chat WhatsApp CS
+        </a>
+      </div>
+    </aside>
+
+    <!-- TAMPILAN KASIR / KATALOG -->
+    <div id="view-kasir" class="flex-1 flex flex-col pb-16">
+      <div class="bg-gradient-to-r from-pink-100 via-rose-50 to-amber-50 p-3 border-b border-pink-200 text-center">
+        <div class="max-w-xl mx-auto space-y-0.5">
+          <span class="text-[9px] font-bold tracking-widest text-rose-600 uppercase bg-rose-100 px-2 py-0.5 rounded-full">KATALOG KING</span>
+          <h3 class="text-xs font-black text-slate-800 uppercase">PUSAT GROSIR KAUS KAKI TERLENGKAP</h3>
+        </div>
+      </div>
+
+      <!-- SLIDER PRODUK TERLARIS -->
+      <div class="bg-white p-3 border-b">
+        <div class="flex items-center justify-between mb-1.5">
+          <h4 class="font-black text-xs uppercase tracking-wider text-amber-600 flex items-center gap-1">
+            <span>🔥</span> Produk Terlaris 
+          </h4>
+        </div>
+        <div id="best-seller-slider" class="flex gap-2.5 overflow-x-auto pb-1 custom-scroll whitespace-nowrap"></div>
+      </div>
+
+      <!-- FILTER LABEL BARANG -->
+      <div class="bg-slate-50 px-3 py-2 border-b">
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 custom-scroll whitespace-nowrap text-[11px]">
+          <span class="font-bold text-slate-500 mr-1 text-[10px]">Filter:</span>
+          <button onclick="setFilterTag('semua')" id="tag-semua" class="px-2.5 py-1 rounded-full bg-blue-600 text-white font-bold transition shadow-sm">Semua</button>
+          <button onclick="setFilterTag('obral')" id="tag-obral" class="px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100">🏷️ Obral (< Rp 45rb)</button>
+          <button onclick="setFilterTag('standar')" id="tag-standar" class="px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100">⚡ Standar (45rb - 52rb)</button>
+          <button onclick="setFilterTag('premium')" id="tag-premium" class="px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100">👑 Premium (> Rp 52rb)</button>
+          <button onclick="setFilterTag('terlaris')" id="tag-terlaris" class="px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100">🔥 Terlaris</button>
+        </div>
+      </div>
+
+      <main class="flex-1 p-2 sm:p-3 bg-slate-100">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5" id="product-grid"></div>
+      </main>
+    </div>
+
+    <!-- TAMPILAN KERANJANG -->
+    <div id="view-keranjang" class="flex-1 p-3 sm:p-6 bg-slate-50 max-w-3xl mx-auto w-full pb-20" style="display: none;">
+      <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col space-y-3 p-4">
+        <div class="flex justify-between items-center border-b pb-3">
+          <h2 class="text-sm sm:text-base font-bold flex items-center gap-1.5"><span>🛒</span> Daftar Pesanan (Lusin)</h2>
+          <button onclick="clearCart()" class="text-[11px] bg-red-50 hover:bg-red-100 text-red-600 px-2.5 py-1 rounded-lg font-semibold transition border border-red-200">Kosongkan Keranjang</button>
+        </div>
+
+        <div class="space-y-2 max-h-[40vh] overflow-y-auto custom-scroll" id="cart-items-page">
+          <p class="text-center text-slate-400 py-6 text-xs">Keranjang masih kosong.</p>
+        </div>
+
+        <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-2.5">
+          <h3 class="font-bold text-xs text-blue-900 uppercase flex items-center gap-1"><span>📋</span> Informasi Pengiriman & Pemesan</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div>
+              <label class="block text-[10px] font-bold text-slate-700 mb-1">Nama Pemesan / Toko: <span class="text-red-500">*</span></label>
+              <input type="text" id="input-customer-name" oninput="removeShake(this)" placeholder="Ketik nama toko/pemesan..." class="w-full bg-white border rounded-lg px-2.5 py-1.5 text-xs focus:outline-blue-600 font-semibold uppercase">
+            </div>
+            <div>
+              <label class="block text-[10px] font-bold text-slate-700 mb-1">Tempat / Kota Tujuan (Pengiriman Medan): <span class="text-red-500">*</span></label>
+              <input type="text" id="input-customer-place" oninput="removeShake(this); calculateEstimatedOngkir();" placeholder="Ketik kota tujuan..." class="w-full bg-white border rounded-lg px-2.5 py-1.5 text-xs focus:outline-blue-600 font-semibold uppercase">
+            </div>
+          </div>
+
+          <div id="ongkir-estimate-box" class="bg-blue-50 border border-blue-200 rounded-lg p-2 text-xs flex justify-between items-center text-blue-900" style="display: none;">
+            <div>
+              <span class="font-bold block text-[11px]">🚚 Estimasi Ongkir:</span>
+              <span id="ongkir-route-desc" class="text-[10px] text-slate-600">Medan ➔ Tujuan</span>
+            </div>
+            <div class="text-right">
+              <span id="ongkir-cost-text" class="font-black text-xs text-blue-700">Rp 0 / Lsn</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t pt-3 space-y-1.5">
+          <div class="flex justify-between text-xs text-slate-600">
+            <span>Total Jenis Barang:</span>
+            <span id="total-items-count-page" class="font-bold text-slate-900">0 Jenis</span>
+          </div>
+          <div class="flex justify-between text-xs text-slate-600">
+            <span>Total Kuantitas Lusin:</span>
+            <span id="total-qty-count-page" class="font-bold text-slate-900">0 Lusin</span>
+          </div>
+          <div id="total-estimation-row" class="flex justify-between text-xs font-black text-slate-900 border-t pt-2" style="display: none;">
+            <span>ESTIMASI TOTAL ONGKIR:</span>
+            <span id="total-with-ongkir-text" class="text-emerald-700 font-black">Rp 0</span>
+          </div>
+          <div class="pt-2">
+            <button onclick="processOrderWA()" class="w-full bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-bold py-3 px-4 rounded-xl shadow text-xs flex items-center justify-center gap-1.5 transition">
+              <span>📱</span> Kirim Pesanan via WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAMPILAN RIWAYAT -->
+    <div id="view-laporan" class="flex-1 p-4 bg-slate-50 pb-20" style="display: none;">
+      <div class="max-w-6xl mx-auto space-y-4">
+        <div class="bg-white rounded-xl shadow p-4">
+          <div class="flex justify-between items-center mb-3 pb-2 border-b">
+            <h2 class="text-sm font-bold text-slate-800">📋 Riwayat Orderan Lokal</h2>
+            <button onclick="clearAllTransactions()" class="text-[10px] bg-red-50 text-red-600 px-2.5 py-1 rounded border border-red-200 hover:bg-red-100 font-semibold">Hapus Riwayat</button>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="bg-slate-100 text-slate-700 border-b">
+                  <th class="p-2">No. Order</th>
+                  <th class="p-2">Waktu</th>
+                  <th class="p-2">Pemesan / Tempat</th>
+                  <th class="p-2 text-center">Total Lusin</th>
+                  <th class="p-2 text-center">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="transactions-table-body" class="divide-y divide-slate-100"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="bon-detail-card" class="bg-white rounded-xl shadow p-4" style="display: none;">
+          <div class="flex justify-between items-center mb-3 pb-2 border-b">
+            <div>
+              <h3 class="text-xs font-bold text-blue-900" id="detail-bon-title">Rincian Order</h3>
+              <p class="text-[10px] text-slate-500" id="detail-bon-date">Waktu: -</p>
+            </div>
+            <button onclick="document.getElementById('bon-detail-card').style.display='none'" class="text-[10px] bg-slate-200 hover:bg-slate-300 px-2 py-1 rounded font-semibold">Tutup</button>
+          </div>
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="bg-blue-50 text-blue-900 border-b">
+                <th class="p-2">Foto Varian</th>
+                <th class="p-2">Nama Produk & Ukuran</th>
+                <th class="p-2 text-center">Jumlah (Lusin)</th>
+              </tr>
+            </thead>
+            <tbody id="detail-bon-body" class="divide-y divide-slate-100"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION BAR -->
+    <nav id="bottom-nav" class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-lg z-40 flex justify-around items-center h-14 px-2 transition-transform duration-300">
+      <button onclick="switchTab('kasir')" id="tab-kasir" class="flex flex-col items-center justify-center flex-1 text-blue-700 font-bold transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+        <span class="text-[9px] mt-0.5">Katalog</span>
+      </button>
+
+      <button onclick="openSidebarMenu()" class="flex flex-col items-center justify-center flex-1 text-slate-500 hover:text-blue-700 font-semibold transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <span class="text-[9px] mt-0.5">Kategori</span>
+      </button>
+
+      <button onclick="switchTab('laporan')" id="tab-laporan" class="flex flex-col items-center justify-center flex-1 text-slate-500 hover:text-blue-700 font-semibold transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+        </svg>
+        <span class="text-[9px] mt-0.5">Riwayat</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- TOMBOL BACK TO TOP -->
+  <button id="back-to-top-btn" onclick="scrollToTop()" class="fixed bottom-16 right-4 bg-blue-900 text-amber-400 p-2.5 rounded-full shadow-2xl border border-amber-400 transition-all duration-300 opacity-0 pointer-events-none z-30 active:scale-95 flex items-center justify-center" title="Kembali ke atas">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- MODAL DETAIL PRODUK -->
+  <div id="product-detail-modal" class="fixed inset-0 bg-black/75 z-50 flex items-center justify-center hidden p-2" onclick="closeProductModal()">
+    <div class="relative w-full max-w-sm" onclick="event.stopPropagation()">
+      <button onclick="slideVariant(-1)" class="absolute -left-2 sm:-left-5 top-1/2 -translate-y-1/2 bg-white/95 text-slate-900 font-black w-8 h-8 rounded-full shadow-lg border border-slate-300 flex items-center justify-center z-30 transition hover:scale-105 text-xs">❮</button>
+      <button onclick="slideVariant(1)" class="absolute -right-2 sm:-right-5 top-1/2 -translate-y-1/2 bg-white/95 text-slate-900 font-black w-8 h-8 rounded-full shadow-lg border border-slate-300 flex items-center justify-center z-30 transition hover:scale-105 text-xs">❯</button>
+      <div id="variant-slider-container" class="flex overflow-x-auto snap-x-mandatory custom-scroll gap-0 items-start scroll-smooth w-full" onscroll="handleVariantSlideScroll()"></div>
+    </div>
+  </div>
+
+  <!-- SCRIPT APLIKASI -->
+  <script>
+    const WHATSAPP_NUMBER = "6285176757424"; 
+
+    const sidebarCategoryData = [
+      { name: "SEMUA", group: "SEMUA", img: "img/logo.png" },
+      { name: "SEKOLAH", group: "SEKOLAH", img: "img/FINI_HITAM.png" },
+      { name: "BABY", group: "BABY", img: "img/ARVIO_HITAM.png" },
+      { name: "KANTOR", group: "dewasa", img: "img/TCHW.png" },
+      { name: "KASUAL", group: "dewasa", img: "img/KAKIBRO_CATUR.png" },
+      { name: "MUSLIM", group: "MUSLIM", img: "img/SCP_PUTIH.png" },
+      { name: "SPORT", group: "SPORT", img: "img/FLEXIBALL.png" },
+      { name: "HANDSOCK", group: "HANDSOCK", img: "img/YUTAKA_MANSET_HITAM.png" },
+      { name: "SARUNG TANGAN", group: "SRT", img: "img/YUTAKA_SRT_HT.png" }
+    ];
+
+    const products = [
+      { 
+        id: 101, 
+        name: "ARVIO SEKOLAH", 
+        category: "SEKOLAH", 
+        priceDisplay: "60RB AN",
+        minPrice: 60000,
+        maxPrice: 100000,
+        isBestSeller: true, 
+        desc: "Kaus kaki sekolah merk ARVIO dengan bahan berkualitas dan nyaman.",
+        mainImg: "img/ARVIO_T-HITAM.png",
+        variants: [
+          { name: "ARVIO T-HITAM", img: "img/ARVIO_T-HITAM.png", subVariants: ["Ukuran 15-16", "Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] },
+          { name: "ARVIO HITAM POLOS", img: "img/ARVIO_HITAM.png", subVariants: ["Ukuran 15-16", "Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] },
+          { name: "ARVIO PUTIH POLOS", img: "img/ARVIO_PUTIH.png", subVariants: ["Ukuran 15-16", "Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] },
+          { name: "ARVIO MK T-HITAM", img: "img/ARVIO_MK_T-HITAM.png", subVariants: ["Ukuran 15-16", "Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] }
+        ]
+      },
+      { 
+        id: 102, 
+        name: "BTS SEKOLAH", 
+        category: "SEKOLAH", 
+        priceDisplay: "30RB AN",
+        minPrice: 30000,
+        maxPrice: 35000,
+        isBestSeller: true, 
+        desc: "Kaus kaki sekolah merk BTS halus dan awet.",
+        mainImg: "img/BTS_TH.png",
+        variants: [
+          { name: "BTS T-HITAM", img: "img/BTS_TH.png", subVariants: ["Ukuran SD", "Ukuran SMP", "Ukuran SMA"] },
+          { name: "BTS HITAM", img: "img/BTS_HT.png", subVariants: ["Ukuran SD", "Ukuran SMP", , "Ukuran SMA"] },
+        ]
+      },
+      { 
+        id: 103, 
+        name: "FINI SEKOLAH", 
+        category: "SEKOLAH", 
+        priceDisplay: "50RB AN",
+        minPrice: 50000,
+        maxPrice: 65000,
+        isBestSeller: true, 
+        desc: "Kaus kaki sekolah merk FINI terlengkap.",
+        mainImg: "img/FINI_T-HITAM.png",
+        variants: [
+          { name: "FINI TELAPAK HITAM", img: "img/FINI_T-HITAM.png", subVariants: ["Ukuran 15-16", "Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] },
+          { name: "FINI HITAM POLOS", img: "img/FINI_HITAM.png", subVariants: ["Ukuran 15-16", "Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] },
+          { name: "FINI PUTIH POLOS", img: "img/FINI_PUTIH.png", subVariants: ["Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] },
+          { name: "FINI PRAMUKA", img: "img/FINI_PRAMUKA.png", subVariants: ["Ukuran SD", "Ukuran SMP", "Ukuran SMA"] }
+        ]
+      },
+      { 
+        id: 104, 
+        name: "FLEXIBALL", 
+        category: "SEKOLAH",
+        priceDisplay: "25RB AN",
+        minPrice: 20000,
+        maxPrice: 25000, 
+        isBestSeller: false, 
+        desc: "Kaus kaki sekolah tanpa tumit.",
+        mainImg: "img/FLEXIBALL.png",
+        variants: [
+          { name: "FLEXIBALL SPORT", img: "img/FLEXIBALL.png", subVariants: ["Ukuran SD", "Ukuran SMP", "Ukuran SMA"] }
+        ]
+      },
+      { 
+        id: 105, 
+        name: "KAKIBRO SEKOLAH ", 
+        category: "SEKOLAH", 
+        priceDisplay: "35RB AN",
+        minPrice: 35000,
+        maxPrice: 45000,
+        isBestSeller: true, 
+        desc: "Kaus kaki KAKIBRO aneka motif dan sekolah.",
+        mainImg: "img/KAKIBRO_TH.png",
+        variants: [
+          { name: "KAKIBRO HITAM POLOS", img: "img/KAKIBRO_HT.png", subVariants: ["Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] },
+          { name: "KAKIBRO PUTIH POLOS", img: "img/KAKIBRO_PUTIH.png", subVariants: ["Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] },
+          { name: "KAKIBRO T-HITAM", img: "img/KAKIBRO_TH.png", subVariants: ["Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] },
+        ]
+      },
+      { 
+        id: 106, 
+        name: "PRAMUKA", 
+        category: "SEKOLAH", 
+        priceDisplay: "30RB AN",
+        minPrice: 30000,
+        maxPrice: 35000,
+        isBestSeller: false, 
+        desc: "Kaus kaki standar seragam pramuka.",
+        mainImg: "img/PRAMUKA.png",
+        variants: [
+          { name: "PRAMUKA ", img: "img/PRAMUKA.png", subVariants: ["Ukuran SD", "Ukuran SMP", "Ukuran SMA"] }
+        ]
+      },
+      { 
+        id: 107, 
+        name: "STUDENT SOCKS", 
+        category: "SEKOLAH", 
+        priceDisplay: "70RB AN",
+        minPrice: 70000,
+        maxPrice: 120000,
+        isBestSeller: false, 
+        desc: "Kaus kaki sekolah STUDENT.",
+        mainImg: "img/SCHW.png",
+        variants: [
+          { name: "SCHW", img: "img/SCHW.png", subVariants: ["Ukuran 15-16","Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22","Ukuran 23-24", "Ukuran 25-26"] },
+          { name: "SCH", img: "img/SCH.png", subVariants: ["Ukuran 15-16","Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22","Ukuran 23-24", "Ukuran 25-26"] },
+          { name: "SCHW MK", img: "img/SCHW_MK.png", subVariants: ["Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22","Ukuran 23-24", "Ukuran 25-26"] },
+          { name: "SCP MK PUTIH", img: "img/SCP_MK_PUTIH.png", subVariants: ["Ukuran 21-22","Ukuran 23-24", "Ukuran 25-26"] },
+          { name: "SCP PUTIH", img: "img/SCP_PUTIH.png", subVariants: ["Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22","Ukuran 23-24", "Ukuran 25-26"] },
+          { name: "SCPW WARNA", img: "img/SCPW_WARNA.png", subVariants: ["Ukuran 15-16","Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22","Ukuran 23-24", "Ukuran 25-26"] },
+        ]
+      },
+      { 
+        id: 108, 
+        name: "VIERI SEKOLAH", 
+        category: "SEKOLAH", 
+        priceDisplay: "38RB AN",
+        minPrice: 38000,
+        maxPrice: 45000,
+        isBestSeller: true, 
+        desc: "Kaus kaki sekolah merk VIERI tebal dan nyaman.",
+        mainImg: "img/VIERI_HITAM.png",
+        variants: [
+          { name: "VIERI T-HITAM", img: "img/VIERI_T-HITAM.png", subVariants: ["Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22","Ukuran 23/24", "Ukuran 25-26"] },
+          { name: "VIERI HITAM POLOS", img: "img/VIERI_HITAM.png", subVariants: ["Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22","Ukuran 23/24", "Ukuran 25-26"] },
+          { name: "VIERI PUTIH POLOS", img: "img/VIERI_PUTIH.png", subVariants: ["Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22","Ukuran 23/24", "Ukuran 25-26"] },
+        ]
+      },
+      { 
+        id: 109, 
+        name: "YUTAKA SEKOLAH", 
+        category: "SEKOLAH",
+         priceDisplay: "35RB AN",
+        minPrice: 35000,
+        maxPrice: 45000,
+        isBestSeller: true, 
+        desc: "Kaus kaki sekolah YUTAKA.",
+        mainImg: "img/YUTAKA_HITAM.png",
+        variants: [
+          { name: "YUTAKA TELAPAK T-HITAM", img: "img/YUTAKA_T-HITAM.png", subVariants: ["Ukuran 15-16","Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] },
+          { name: "YUTAKA HITAM POLOS", img: "img/YUTAKA_HITAM.png", subVariants: ["Ukuran 15-16","Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] },
+          { name: "YUTAKA PUTIH POLOS", img: "img/YUTAKA_PUTIH.png", subVariants: ["Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 25-26"] },
+        ]
+      },
+      { 
+        id: 110, 
+        name: "KAKIBRO SPDX MK", 
+        category: "SEKOLAH", 
+        priceDisplay: "40RB AN",
+        minPrice: 40000,
+        maxPrice: 45000,
+        isBestSeller: false, 
+        desc: "Kaus kaki semata kaki.",
+        mainImg: "img/KAKIBRO_MK.png",
+        variants: [
+          { name: "KAKIBRO MK", img: "img/KAKIBRO_MK.png", subVariants: ["T-HITAM", "HITAM", "PUTIH"] }
+        ]
+      },
+      { 
+        id: 111, 
+        name: "KAKIBRO SPDX-BR", 
+        category: "SEKOLAH", 
+        priceDisplay: "45RB AN",
+        minPrice: 45000,
+        maxPrice: 50000,
+        isBestSeller: false, 
+        desc: "Kaus kaki semata kaki.",
+        mainImg: "img/KAKIBRO_BR.png",
+        variants: [
+          { name: "KAKIBRO BR", img: "img/KAKIBRO_BR.png", subVariants: ["T-HITAM", "HITAM", "PUTIH"] },
+          { name: "KAKIBRO CATUR", img: "img/KAKIBRO_CATUR.png", subVariants: ["All Size"] }
+        ]
+      },
+      { 
+        id: 112, 
+        name: "FINI_LUTUT", 
+        category: "SEKOLAH", 
+        priceDisplay: "60RB AN",
+        minPrice: 60000,
+        maxPrice: 65000,
+        isBestSeller: false, 
+        desc: "Kaus kaki selutut.",
+        mainImg: "img/FINI_LUTUT.png",
+        variants: [
+          { name: "FINI LUTUT", img: "img/FINI_LUTUT.png", subVariants: ["T-HITAM", "HITAM", "PUTIH"] },
+        ]
+      },
+      { 
+        id: 113, 
+        name: "KAKIBRO SPORT ", 
+        category: "SEKOLAH", 
+        priceDisplay: "30RB AN",
+        minPrice: 30000,
+        maxPrice: 35000,
+        isBestSeller: true, 
+        desc: "Kaus kaki KAKIBRO .",
+        mainImg: "img/KAKIBRO_S_T-HITAM.png",
+        variants: [
+          { name: "KAKIBRO SPORT T-HITAM", img: "img/KAKIBRO_S_T-HITAM.png", subVariants: ["Ukuran SD", "Ukuran SMP", "Ukuran SMA"] },
+          { name: "KAKIBRO SPORT HITAM", img: "img/KAKIBRO_S_HITAM.png", subVariants: ["Ukuran SD", "Ukuran SMP", "Ukuran SMA"] },
+          { name: "KAKIBRO SPORT PUTIH", img: "img/KAKIBRO_S_PUTIH.png", subVariants: ["Ukuran SD", "Ukuran SMP", "Ukuran SMA"] },
+        ]
+      },
+      { 
+        id: 114, 
+        name: "TCHW", 
+        category: "SEKOLAH", 
+        priceDisplay: "100RB AN",
+        minPrice: 100000,
+        maxPrice: 140000,
+        isBestSeller: false, 
+        desc: "Kaus kaki sekolah.",
+        mainImg: "img/TCHW.png",
+        variants: [
+          { name: "TCHW", img: "img/TCHW.png", subVariants: ["Ukuran 15-16","Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 23-24", "Ukuran 25-26"] }
+        ]
+      },
+      { 
+        id: 201, 
+        name: "YUTAKA MANSET", 
+        category: "HANDSOCK",
+        priceDisplay: "70RB AN",
+        minPrice: 73000,
+        maxPrice: 730000, 
+        isBestSeller: true, 
+        desc: "MANSET TANGAN.",
+        mainImg: "img/YUTAKA_MANSET_HITAM.png",
+        variants: [
+          { 
+            name: "YUTAKA MANSET HITAM", 
+            img: "img/YUTAKA_MANSET_HITAM.png",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "YUTAKA MANSET PUTIH", 
+            img: "img/YUTAKA_MANSET_PT.png",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "YUTAKA MANSET COKLAT", 
+            img: "img/YUTAKA_MANSET_CK.png",
+            subVariants: ["FREE SIZE"] 
+          }
+        ]
+      },
+      { 
+        id: 202, 
+        name: "JAMIILATUN HANDSOCKS", 
+        category: "HANDSOCK", 
+        priceDisplay: "50RB AN",
+        minPrice: 55000,
+        maxPrice: 55000,
+        isBestSeller: true, 
+        desc: "HANDSOCKS.",
+        mainImg: "img/JAMIILATUN_HDS_PT.png",
+        variants: [
+          { 
+            name: "JAMIILATUN HDS PUTIH", 
+            img: "img/JAMIILATUN_HDS_PT.png",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "JAMIILATUN HDS HITAM", 
+            img: "img/JAMIILATUN_HDS_HT.png",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "JAMIILATUN HDS CREAM", 
+            img: "img/JAMIILATUN_HDS_CR.png",
+            subVariants: ["FREE SIZE"] 
+          }
+        ]
+      },
+      { 
+        id: 301, 
+        name: "YUTAKA SRT HITAM", 
+        category: "SARUNG TANGAN", 
+        priceDisplay: "80RB AN",
+        minPrice: 80000,
+        maxPrice: 80000,
+        isBestSeller: true, 
+        desc: "SARUNG TANGAN",
+        mainImg: "img/YUTAKA_SRT_HT.jpg",
+        variants: [
+          { 
+            name: "YUTAKA SRT HITAM", 
+            img: "img/YUTAKA_SRT_HT.jpg",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "YUTAKA SRT HITAM 1/2 JARI", 
+            img: "img/YUTAKA_SRT_HT_1.2.jpg",
+            subVariants: ["FREE SIZE"] 
+          }
+        ]
+      },
+      { 
+        id: 302, 
+        name: "YUTAKA SRT MISTY", 
+        category: "SARUNG TANGAN", 
+        priceDisplay: "80RB AN",
+        minPrice: 80000,
+        maxPrice: 80000,
+        isBestSeller: true, 
+        desc: "SARUNG TANGAN",
+        mainImg: "img/YUTAKA_SRT_MISTI.png",
+        variants: [
+          { 
+            name: "YUTAKA SRT MISTY", 
+            img: "img/YUTAKA_SRT_MISTI.png",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "YUTAKA SRT MISTY 1/2 JARI", 
+            img: "img/YUTAKA_SRT_MISTI1.2.png",
+            subVariants: ["FREE SIZE"] 
+          }
+        ]
+      },
+        { 
+        id: 303, 
+        name: "YUTAKA SRT PUTIH", 
+        category: "SARUNG TANGAN", 
+        priceDisplay: "80RB AN",
+        minPrice: 80000,
+        maxPrice: 80000,
+        isBestSeller: true, 
+        desc: "SARUNG TANGAN",
+        mainImg: "img/YUTAKA_SRT_PT.jpg",
+        variants: [
+          { 
+            name: "YUTAKA SRT PUTIH", 
+            img: "img/YUTAKA_SRT_PT.jpg",
+            subVariants: ["FREE SIZE"] 
+          }
+        ]
+      },
+      { 
+        id: 401, 
+        name: "FINI JPL NYLN", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim berbahan nyln.",
+        mainImg: "img/FINI_NYLN_T-HITAM.jpg",
+        variants: [
+          { 
+            name: "FINI JPL NYLN T-CREAM", 
+            img: "img/FINI_NYLN_T-HITAM.jpg",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "FINI JPL NYLN HITAM",
+            img: "img/FINI_NYLN_HITAM.jpg",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "FINI JPL NYLN CREAM", 
+            img: "img/FINI_NYLN_CREAM.jpg",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          }
+        ]
+      },
+      { 
+        id: 402, 
+        name: "FINI WUDHU", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim wudhu.",
+        mainImg: "img/FINI_WUDHU_TH_CREAM.jpg",
+        variants: [
+          { 
+            name: "FINI WUDHU TH-CREAM", 
+            img: "img/FINI_WUDHU_TH_CREAM.jpg",
+            subVariants: ["Free Size"] 
+          },
+          { 
+            name: "FINI WUDHU COKLAT", 
+            img: "img/FINI_WUDHU_CK.jpg",
+            subVariants: ["Free Size"] 
+          },
+          { 
+            name: "FINI WUDHU PUTIH", 
+            img: "img/FINI_WUDHU_PT.jpg",
+            subVariants: ["Free Size"] 
+          },
+          { 
+            name: "FINI WUDHU TH-PUTIH", 
+            img: "img/FINI_WUDHU_PT_TH.jpg",
+            subVariants: ["Free Size"] 
+          },
+        ]
+      },
+      { 
+        id: 403, 
+        name: "JAMIILATUN JPL AS", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim anti slip.",
+        mainImg: "img/JAMILATUN_JPL_AS_CK.jpg",
+        variants: [
+          { 
+            name: "JAMIILATUN JPL AS CREAM", 
+            img: "img/JAMILATUN_JPL_AS_CK.jpg",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "JAMIILATUN JPL AS HITAM", 
+            img: "img/JAMILATUN_JPL_AS_HT.jpg",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+        ]
+      },
+      { 
+        id: 404, 
+        name: "FELLAS JPL ", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim polos & anti slip.",
+        mainImg: "img/FELLAS_JPL_COKLAT_POLOS.png",
+        variants: [
+          { 
+            name: "FELLAS JPL COKLAT POLOS", 
+            img: "img/FELLAS_JPL_COKLAT_POLOS.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "FELLAS JPL HITAM POLOS", 
+            img: "img/FELLAS_JPL_HITAM_POLOS.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "FELLAS JPL AS COKLAT", 
+            img: "img/FELLAS_JPL_AS_COKLAT.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+        ]
+      },
+      { 
+        id: 405, 
+        name: "KAKIBRO JPL", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim.",
+        mainImg: "img/KAKIBRO_JPL_TH.png",
+        variants: [
+          { 
+            name: "KAKIBRO JPL T-CREAM", 
+            img: "img/KAKIBRO_JPL_TH.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "KAKIBRO JPL HITAM",
+            img: "img/KAKIBRO_JPL_HT.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "KAKIBRO JPL CREAM", 
+            img: "img/KAKIBRO_JPL_CR.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          }
+        ]
+      },
+      { 
+        id: 406, 
+        name: "JAMIILATUN JPL", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim.",
+        mainImg: "img/JAMILATUN_JPL_TH.png",
+        variants: [
+          { 
+            name: "JAMIILATUN JPL T-CREAM", 
+            img: "img/JAMILATUN_JPL_TH.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "JAMIILATUN JPL HITAM",
+            img: "img/JAMILATUN_JPL_HT.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "JAMIILATUN JPL CREAM", 
+            img: "img/JAMILATUN_JPL_CR.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "JAMIILATUN JPL WARNA", 
+            img: "img/JAMILATUN_JPL_WARNA.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          }
+        ]
+      },
+      { 
+        id: 407, 
+        name: "FINI ESSENTIALS", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim .",
+        mainImg: "img/FINI_ESSENTIAL.png",
+        variants: [
+          { 
+            name: "FINI ESSENTIALS", 
+            img: "img/FINI_ESSENTIAL.png",
+            subVariants: ["Free Size"] 
+          },
+        ]
+      },
+      { 
+        id: 408, 
+        name: "FINI JPL RAYA", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim .",
+        mainImg: "img/FINI_RAYA.png",
+        variants: [
+          { 
+            name: "FINI RAYA", 
+            img: "img/FINI_RAYA.png",
+            subVariants: ["Free Size"] 
+          },
+        ]
+      },
+      { 
+        id: 409, 
+        name: "FINI JPL MONO", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim .",
+        mainImg: "img/FINI_MONO.png",
+        variants: [
+          { 
+            name: "FINI MONO", 
+            img: "img/FINI_MONO.png",
+            subVariants: ["Free Size"] 
+          },
+        ]
+      },
+      { 
+        id: 410, 
+        name: "FINI JPL PASTEL", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim .",
+        mainImg: "img/FINI_PASTEL.png",
+        variants: [
+          { 
+            name: "FINI PASTEL", 
+            img: "img/FINI_PASTEL.png",
+            subVariants: ["Free Size"] 
+          },
+        ]
+      },
+      { 
+        id: 411, 
+        name: "FINI JPL MISTY", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim .",
+        mainImg: "img/FINI_MISTY.png",
+        variants: [
+          { 
+            name: "FINI MISTY", 
+            img: "img/FINI_MISTY.png",
+            subVariants: ["Free Size"] 
+          },
+        ]
+      },
+      { 
+        id: 412, 
+        name: "FINI JPL FLORAL", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim .",
+        mainImg: "img/FINI_FLORAL.png",
+        variants: [
+          { 
+            name: "FINI FLORAL", 
+            img: "img/FINI_FLORAL.png",
+            subVariants: ["Free Size"] 
+          },
+        ]
+      },
+      { 
+        id: 413, 
+        name: "FINI JPL COLOURFUL", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim .",
+        mainImg: "img/FINI_COLOURFUL.jpeg",
+        variants: [
+          { 
+            name: "FINI COLOURFUL", 
+            img: "img/FINI_COLOURFUL.jpeg",
+            subVariants: ["Free Size"] 
+          },
+        ]
+      },
+      { 
+        id: 414, 
+        name: "YUTAKA JPL", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim.",
+        mainImg: "img/YUTAKA_JPL_TH.png",
+        variants: [
+          { 
+            name: "YUTAKA JPL T-CREAM", 
+            img: "img/YUTAKA_JPL_TH.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "YUTAKA JPL HITAM",
+            img: "img/YUTAKA_JPL_HT.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "YUTAKA JPL CREAM", 
+            img: "img/YUTAKA_JPL_CR.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "YUTAKA JPL WARNA", 
+            img: "img/YUTAKA_JPL_WARNA.png",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          }
+        ]
+      },
+      { 
+        id: 415, 
+        name: "YUTAKA WINTER", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim .",
+        mainImg: "img/YUTAKA_WINTER_CR.png",
+        variants: [
+          { 
+            name: "YUTAKA WINTER CREAM", 
+            img: "img/YUTAKA_WINTER_CR.png",
+            subVariants: ["Free Size"] 
+          },
+          { 
+            name: "YUTAKA WINTER HITAM", 
+            img: "img/YUTAKA_WINTER_HT.png",
+            subVariants: ["Free Size"] 
+          },
+          { 
+            name: "YUTAKA WINTER WARNA", 
+            img: "img/YUTAKA_WINTER_WR.jpeg",
+            subVariants: ["Free Size"] 
+          },
+          ]
+      },
+          { 
+        id: 414, 
+        name: "YUTAKA JPL TIPIS", 
+        category: "MUSLIM", 
+        isBestSeller: true, 
+        desc: "Kaus kaki muslim.",
+        mainImg: "img/YUTAKA_TIPIS_CR.jpg",
+        variants: [
+          { 
+            name: "YUTAKA JPL TIPIS CREAM", 
+            img: "img/YUTAKA_TIPIS_CR.jpg",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "YUTAKA JPL TIPIS HITAM",
+            img: "img/YUTAKA_TIPIS_HT.jpg",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+          { 
+            name: "YUTAKA JPL TIPIS AS CREAM", 
+            img: "img/YUTAKA_TIPIS_AS.jpg",
+            subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+        ]
+      },
+    ].sort((a, b) => a.name.localeCompare(b.name));
+
+    let cart = JSON.parse(localStorage.getItem('king_cart_items')) || [];
+    let currentCategory = "Semua";
+    let currentFilterTag = "semua";
+    let activeProductForDetail = null;
+    let currentVariantIndex = 0;
+    let modalVariantQuantities = {}; 
+    let transactions = JSON.parse(localStorage.getItem('pos_transactions')) || [];
+    let currentOngkirPerLusin = 0;
+    let currentSidebarGroup = "semua";
+    let lastScrollY = window.scrollY;
+
+    window.onload = function() {
+      updateCartBadge();
+      renderBestSellers();
+      renderProducts();
+      renderSidebarCategoryList();
+      window.addEventListener('scroll', handleWindowScroll);
+    };
+
+    function goToApp() {
+      document.getElementById('view-landing').style.display = 'none';
+      document.getElementById('main-app-container').style.display = 'flex';
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+
+    function backToLanding() {
+      document.getElementById('main-app-container').style.display = 'none';
+      document.getElementById('view-landing').style.display = 'flex';
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+
+    function handleWindowScroll() {
+      const currentScrollY = window.scrollY;
+      const bottomNav = document.getElementById('bottom-nav');
+      const backToTopBtn = document.getElementById('back-to-top-btn');
+      if (!bottomNav) return;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        bottomNav.style.transform = 'translateY(100%)';
+      } else {
+        bottomNav.style.transform = 'translateY(0)';
+      }
+      lastScrollY = currentScrollY;
+
+      if (currentScrollY > 250) {
+        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+        backToTopBtn.classList.add('opacity-100');
+      } else {
+        backToTopBtn.classList.remove('opacity-100');
+        backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+      }
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function setFilterTag(tag) {
+      currentFilterTag = tag;
+      ['semua', 'obral', 'standar', 'premium', 'terlaris'].forEach(t => {
+        const btn = document.getElementById(`tag-${t}`);
+        if (btn) {
+          btn.className = (t === tag) ? "px-2.5 py-1 rounded-full bg-blue-600 text-white font-bold transition shadow-sm" : "px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100";
+        }
+      });
+      renderProducts();
+    }
+
+    function openSidebarMenu() {
+      document.getElementById('sidebar-overlay').classList.remove('pointer-events-none');
+      document.getElementById('sidebar-overlay').classList.add('opacity-100');
+      document.getElementById('sidebar-panel').classList.remove('-translate-x-full');
+    }
+
+    function closeSidebarMenu() {
+      document.getElementById('sidebar-overlay').classList.remove('opacity-100');
+      document.getElementById('sidebar-overlay').classList.add('pointer-events-none');
+      document.getElementById('sidebar-panel').classList.add('-translate-x-full');
+    }
+
+    function filterSidebarGroup(group) {
+      currentSidebarGroup = group;
+      document.getElementById('tab-group-semua').className = `flex-1 py-3 px-3 text-center border-b-2 whitespace-nowrap ${group === 'semua' ? 'border-blue-600 text-blue-600 font-bold' : 'border-transparent text-slate-500'}`;
+      document.getElementById('tab-group-sekolah').className = `flex-1 py-3 px-3 text-center border-b-2 whitespace-nowrap ${group === 'sekolah' ? 'border-blue-600 text-blue-600 font-bold' : 'border-transparent text-slate-500'}`;
+      document.getElementById('tab-group-dewasa').className = `flex-1 py-3 px-3 text-center border-b-2 whitespace-nowrap ${group === 'dewasa' ? 'border-blue-600 text-blue-600 font-bold' : 'border-transparent text-slate-500'}`;
+      renderSidebarCategoryList();
+    }
+
+    function renderSidebarCategoryList() {
+      const container = document.getElementById('sidebar-category-list');
+      let items = sidebarCategoryData;
+      if (currentSidebarGroup !== 'semua') {
+        items = sidebarCategoryData.filter(item => item.group === currentSidebarGroup || item.name === 'Semua');
+      }
+      container.innerHTML = items.map(cat => `
+        <div onclick="selectCategoryFromSidebar('${cat.name}')" class="flex items-center justify-between p-2.5 rounded-2xl hover:bg-blue-50 border border-transparent hover:border-blue-200 cursor-pointer transition group">
+          <div class="flex items-center gap-3">
+            <img src="${cat.img}" onerror="this.src='https://via.placeholder.com/40'" class="w-10 h-10 object-contain rounded-full border bg-slate-50 p-1 group-hover:scale-105 transition">
+            <span class="font-bold text-xs text-slate-800 group-hover:text-blue-900">${cat.name}</span>
+          </div>
+          <span class="text-slate-400 group-hover:text-blue-600 font-black text-sm">›</span>
+        </div>
+      `).join('');
+    }
+
+    function selectCategoryFromSidebar(catName) {
+      closeSidebarMenu();
+      currentCategory = catName;
+      renderProducts();
+    }
+
+    function calculateEstimatedOngkir() {
+      const placeInput = document.getElementById('input-customer-place').value.trim().toUpperCase();
+      const ongkirBox = document.getElementById('ongkir-estimate-box');
+      const routeDesc = document.getElementById('ongkir-route-desc');
+      const costText = document.getElementById('ongkir-cost-text');
+      const totalRow = document.getElementById('total-estimation-row');
+
+      if (!placeInput) {
+        ongkirBox.style.display = 'none';
+        totalRow.style.display = 'none';
+        currentOngkirPerLusin = 0;
+        return;
+      }
+
+      let tarif = 10000; 
+      let zona = "Wilayah Sekitar Sumut";
+      const acehList = ["BANDA ACEH", "LHOKSUKON", "BLANG PIDIE", "SINABANG", "KUALA SIMPANG", "IDI", "ACEH"];
+      const riauList = ["RIAU", "PERANAP", "RANTAU PRAPAT", "AJAMU"];
+      const jauhList = ["JAKARTA", "BANDUNG", "SURABAYA", "JATIM", "JATENG"];
+
+      if (acehList.some(k => placeInput.includes(k))) {
+        tarif = 25000; zona = "Wilayah Aceh";
+      } else if (riauList.some(k => placeInput.includes(k))) {
+        tarif = 20000; zona = "Wilayah Riau";
+      } else if (jauhList.some(k => placeInput.includes(k))) {
+        tarif = 45000; zona = "Jawa / Luar Pulau";
+      } else if (["MEDAN", "DELI TUA", "MARELAN", "BINJAI", "TANJUNG MORAWA"].some(k => placeInput.includes(k))) {
+        tarif = 8000; zona = "Area Medan Sekitarnya";
+      }
+
+      currentOngkirPerLusin = tarif;
+      routeDesc.innerText = `Medan ➔ ${placeInput} (${zona})`;
+      costText.innerText = `Rp ${tarif.toLocaleString('id-ID')} / Lsn`;
+      ongkirBox.style.display = 'flex';
+      totalRow.style.display = 'flex';
+      updateCartPageTotals();
+    }
+
+    function switchTab(tab) {
+      document.getElementById('view-kasir').style.display = 'none';
+      document.getElementById('view-keranjang').style.display = 'none';
+      document.getElementById('view-laporan').style.display = 'none';
+
+      document.getElementById('tab-kasir').className = 'flex flex-col items-center justify-center flex-1 text-slate-500 hover:text-blue-700 font-semibold transition';
+      document.getElementById('tab-laporan').className = 'flex flex-col items-center justify-center flex-1 text-slate-500 hover:text-blue-700 font-semibold transition';
+
+      if (tab === 'kasir') {
+        document.getElementById('view-kasir').style.display = 'flex';
+        document.getElementById('tab-kasir').className = 'flex flex-col items-center justify-center flex-1 text-blue-700 font-bold transition';
+      } else if (tab === 'keranjang') {
+        document.getElementById('view-keranjang').style.display = 'block';
+        renderCartPage();
+      } else if (tab === 'laporan') {
+        document.getElementById('view-laporan').style.display = 'block';
+        document.getElementById('tab-laporan').className = 'flex flex-col items-center justify-center flex-1 text-blue-700 font-bold transition';
+        renderTransactionsTable();
+      }
+    }
+
+    function getProductOrderedTotal(productId) {
+      return cart.filter(item => item.productId === productId).reduce((sum, item) => sum + item.qty, 0);
+    }
+
+    function renderBestSellers() {
+      const slider = document.getElementById('best-seller-slider');
+      const bestSellerProducts = products.filter(p => p.isBestSeller);
+      slider.innerHTML = bestSellerProducts.map(p => {
+        const orderedTotal = getProductOrderedTotal(p.id);
+        return `
+          <div onclick="openProductDetail(${p.id})" class="bg-white rounded-xl p-2 shadow-sm border border-amber-200 hover:border-amber-400 transition-all cursor-pointer flex flex-col justify-between shrink-0 w-36 relative group">
+            ${orderedTotal > 0 ? `<span class="absolute top-1.5 right-1.5 bg-blue-600 text-white text-[9px] font-black px-1.5 py-0.2 rounded-full shadow z-10">${orderedTotal} Lsn</span>` : ''}
+            <div class="relative w-full h-24 bg-white rounded-lg p-0.5 flex items-center justify-center overflow-hidden border border-slate-100">
+              <img src="${p.mainImg}" onerror="this.src='https://via.placeholder.com/150?text=${encodeURIComponent(p.name)}'" class="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105">
+              <span class="absolute top-1 left-1 bg-amber-500 text-white text-[7px] font-bold px-1 rounded shadow">★ Best</span>
+            </div>
+            <div class="pt-1.5 text-center">
+              <h4 class="font-bold text-[11px] text-slate-800 truncate">${p.name}</h4>
+              <span class="text-[10px] font-black text-rose-600 block">${p.priceDisplay}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById('product-grid');
+      const keyword = document.getElementById('search-input').value.toLowerCase();
+      let filtered = products;
+
+      if (currentCategory !== "Semua") filtered = filtered.filter(p => p.category === currentCategory);
+      if (keyword) filtered = filtered.filter(p => p.name.toLowerCase().includes(keyword));
+
+      if (currentFilterTag === 'obral') filtered = filtered.filter(p => p.minPrice < 45000);
+      else if (currentFilterTag === 'standar') filtered = filtered.filter(p => p.minPrice >= 45000 && p.maxPrice <= 52000);
+      else if (currentFilterTag === 'premium') filtered = filtered.filter(p => p.maxPrice > 52000);
+      else if (currentFilterTag === 'terlaris') filtered = filtered.filter(p => p.isBestSeller);
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-400 font-semibold text-xs">Tidak ada produk ditemukan.</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => {
+        const orderedTotal = getProductOrderedTotal(p.id);
+        return `
+          <div onclick="openProductDetail(${p.id})" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 flex flex-col justify-between relative group cursor-pointer transition">
+            ${orderedTotal > 0 ? `<span class="absolute top-1.5 left-1.5 bg-blue-600 text-white text-[9px] font-black px-1.5 py-0.2 rounded-full shadow-md z-10">${orderedTotal} Lsn</span>` : ''}
+            <div class="relative w-full aspect-[4/5] bg-slate-50 flex items-center justify-center overflow-hidden">
+              <img src="${p.mainImg}" onerror="this.src='https://via.placeholder.com/250x300?text=${encodeURIComponent(p.name)}'" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              ${p.isBestSeller ? '<span class="absolute top-1.5 right-1.5 bg-amber-500 text-white text-[7px] font-black px-1 rounded shadow">★ BEST</span>' : ''}
+            </div>
+            <div class="p-2 flex flex-col justify-between flex-1">
+              <div>
+                <h3 class="font-semibold text-[11px] sm:text-xs text-slate-800 line-clamp-2 leading-tight">${p.name}</h3>
+                <p class="text-[9px] text-slate-400 font-medium mt-0.5">${p.category}</p>
+              </div>
+              <div class="mt-1.5 flex items-center justify-between">
+                <span class="text-[11px] font-black text-rose-600">${p.priceDisplay}</span>
+                <span class="text-[9px] ${orderedTotal > 0 ? 'text-emerald-700 font-bold' : 'text-blue-600 font-bold'}">${orderedTotal > 0 ? `✔ ${orderedTotal} Lsn` : 'Pilih ➔'}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function openProductDetail(productId) {
+      activeProductForDetail = products.find(p => p.id === productId);
+      if (!activeProductForDetail) return;
+
+      modalVariantQuantities = {};
+      cart.filter(item => item.productId === activeProductForDetail.id).forEach(item => {
+        modalVariantQuantities[item.fullVariantKey] = item.qty;
+      });
+
+      currentVariantIndex = 0;
+      renderFullProductVariantCards();
+      document.getElementById('product-detail-modal').classList.remove('hidden');
+
+      setTimeout(() => {
+        const container = document.getElementById('variant-slider-container');
+        container.scrollTo({ left: 0, behavior: 'instant' });
+      }, 50);
+    }
+
+    function renderFullProductVariantCards() {
+      const container = document.getElementById('variant-slider-container');
+      const p = activeProductForDetail;
+
+      container.innerHTML = p.variants.map((v) => {
+        let sizesHTML = '';
+        if (v.subVariants && v.subVariants.length > 0) {
+          sizesHTML = v.subVariants.map(sizeName => {
+            const fullKey = `${v.name} - ${sizeName}`;
+            const qty = modalVariantQuantities[fullKey] || 0;
+            const isSelected = qty > 0;
+            return `
+              <div onclick="toggleVariantSelection('${fullKey}')" class="p-1.5 rounded-lg border transition flex items-center justify-between cursor-pointer select-none ${isSelected ? 'bg-blue-50 border-blue-600 shadow-sm' : 'bg-white border-slate-200 hover:bg-slate-50'}">
+                <div class="flex items-center gap-1.5">
+                  <span class="font-black text-[11px] ${isSelected ? 'text-blue-900' : 'text-slate-800'}">${sizeName}</span>
+                  <span class="text-[9px] ${isSelected ? 'text-blue-600 font-bold' : 'text-slate-400'}">${isSelected ? '✔ Terpilih' : 'Pilih'}</span>
+                </div>
+                <div class="flex items-center gap-1" onclick="event.stopPropagation()">
+                  <button onclick="changeModalVariantQty('${fullKey}', -1)" class="w-5 h-5 bg-slate-100 border font-extrabold text-slate-700 rounded hover:bg-slate-200 active:scale-95 text-[10px] flex items-center justify-center">-</button>
+                  <span class="w-5 text-center text-[11px] font-black text-blue-800">${qty}</span>
+                  <button onclick="changeModalVariantQty('${fullKey}', 1)" class="w-5 h-5 bg-blue-600 font-extrabold text-white rounded hover:bg-blue-700 active:scale-95 text-[10px] flex items-center justify-center">+</button>
+                </div>
+              </div>
+            `;
+          }).join('');
+        } else {
+          const fullKey = v.name;
+          const qty = modalVariantQuantities[fullKey] || 0;
+          const isSelected = qty > 0;
+          sizesHTML = `
+            <div onclick="toggleVariantSelection('${fullKey}')" class="p-1.5 rounded-lg border transition flex items-center justify-between cursor-pointer select-none ${isSelected ? 'bg-blue-50 border-blue-600 shadow-sm' : 'bg-white border-slate-200 hover:bg-slate-50'}">
+              <div class="flex items-center gap-1.5">
+                <span class="font-black text-[11px] ${isSelected ? 'text-blue-900' : 'text-slate-800'}">${v.name}</span>
+                <span class="text-[9px] ${isSelected ? 'text-blue-600 font-bold' : 'text-slate-400'}">${isSelected ? '✔ Terpilih' : 'Pilih'}</span>
+              </div>
+              <div class="flex items-center gap-1" onclick="event.stopPropagation()">
+                <button onclick="changeModalVariantQty('${fullKey}', -1)" class="w-5 h-5 bg-slate-100 border font-extrabold text-slate-700 rounded hover:bg-slate-200 active:scale-95 text-[10px] flex items-center justify-center">-</button>
+                <span class="w-5 text-center text-[11px] font-black text-blue-800">${qty}</span>
+                <button onclick="changeModalVariantQty('${fullKey}', 1)" class="w-5 h-5 bg-blue-600 font-extrabold text-white rounded hover:bg-blue-700 active:scale-95 text-[10px] flex items-center justify-center">+</button>
+              </div>
+            </div>
+          `;
+        }
+
+        return `
+          <div class="variant-full-card-slide p-1">
+            <div class="bg-white rounded-3xl p-3.5 shadow-2xl border border-slate-200 space-y-2.5 relative max-h-[85vh] overflow-y-auto custom-scroll">
+              <button onclick="closeProductModal()" class="absolute top-3 right-3 bg-slate-100 hover:bg-slate-200 w-7 h-7 rounded-full font-black text-slate-700 flex items-center justify-center z-10 text-xs">✕</button>
+              <div>
+                <span class="bg-blue-50 text-blue-700 text-[10px] px-2 py-0.5 rounded-full font-bold">${p.category}</span>
+                <h2 class="font-black text-base text-slate-900 mt-0.5">${p.name}</h2>
+              </div>
+              <div class="bg-slate-50 p-1.5 rounded-xl border border-slate-200 flex flex-col items-center justify-center overflow-hidden">
+                <div class="w-full h-36 rounded-lg overflow-hidden bg-white border shadow-sm">
+                  <img src="${v.img}" onerror="this.src='https://via.placeholder.com/300?text=${encodeURIComponent(v.name)}'" class="w-full h-full object-cover">
+                </div>
+                <span class="text-[10px] font-black text-slate-800 mt-1 bg-white px-2 py-0.5 rounded-full border uppercase shadow-sm">${v.name}</span>
+              </div>
+              <div class="bg-slate-50 p-2 rounded-xl border border-slate-200 space-y-1.5">
+                <label class="block text-[10px] font-bold text-blue-900 uppercase">PILIH UKURAN:</label>
+                <div class="max-h-28 overflow-y-auto space-y-1 pr-0.5 custom-scroll">${sizesHTML}</div>
+              </div>
+              <div class="flex gap-2 pt-0.5">
+                <button onclick="askProductVariantViaWA()" class="flex-1 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-bold py-2.5 px-2 rounded-xl shadow text-[11px] transition flex items-center justify-center gap-1 border border-emerald-400"><span>💬</span> WA CS</button>
+                <button onclick="saveMultipleVariantsToCart()" class="flex-[2] bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold py-2.5 px-2 rounded-xl shadow text-[11px] transition flex items-center justify-center gap-1"><span>🛒</span> SIMPAN KERANJANG</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function handleVariantSlideScroll() {
+      const container = document.getElementById('variant-slider-container');
+      const itemWidth = container.clientWidth;
+      if (itemWidth > 0) currentVariantIndex = Math.round(container.scrollLeft / itemWidth);
+    }
+
+    function slideVariant(direction) {
+      const variants = activeProductForDetail.variants;
+      currentVariantIndex += direction;
+      if (currentVariantIndex < 0) currentVariantIndex = variants.length - 1;
+      if (currentVariantIndex >= variants.length) currentVariantIndex = 0;
+      const container = document.getElementById('variant-slider-container');
+      container.scrollTo({ left: currentVariantIndex * container.clientWidth, behavior: 'smooth' });
+    }
+
+    function toggleVariantSelection(fullKey) {
+      modalVariantQuantities[fullKey] = (modalVariantQuantities[fullKey] || 0) > 0 ? 0 : 1;
+      renderFullProductVariantCards();
+    }
+
+    function changeModalVariantQty(fullKey, delta) {
+      let current = (modalVariantQuantities[fullKey] || 0) + delta;
+      modalVariantQuantities[fullKey] = current < 0 ? 0 : current;
+      renderFullProductVariantCards();
+    }
+
+    function askProductVariantViaWA() {
+      if (!activeProductForDetail) return;
+      const activeVariant = activeProductForDetail.variants[currentVariantIndex];
+      let msg = `*TANYA STOK / INFO PRODUK - KING KAUS KAKI*\nProduk: *${activeProductForDetail.name}*\nVarian: *${activeVariant.name}*`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    function saveMultipleVariantsToCart() {
+      if (!activeProductForDetail) return;
+      cart = cart.filter(item => item.productId !== activeProductForDetail.id);
+      Object.keys(modalVariantQuantities).forEach(fullKey => {
+        const qty = modalVariantQuantities[fullKey];
+        if (qty > 0) {
+          cart.push({
+            cartItemId: `${activeProductForDetail.id}-${fullKey}`,
+            productId: activeProductForDetail.id,
+            fullVariantKey: fullKey,
+            name: `${activeProductForDetail.name} (${fullKey})`,
+            category: activeProductForDetail.category,
+            img: activeProductForDetail.mainImg,
+            qty: qty
+          });
+        }
+      });
+      localStorage.setItem('king_cart_items', JSON.stringify(cart));
+      closeProductModal();
+      updateCartBadge();
+      renderProducts();
+      renderBestSellers();
+    }
+
+    function closeProductModal() {
+      document.getElementById('product-detail-modal').classList.add('hidden');
+    }
+
+    function updateQty(cartItemId, delta) {
+      const item = cart.find(i => i.cartItemId === cartItemId);
+      if (item) {
+        item.qty += delta;
+        if (item.qty <= 0) cart = cart.filter(i => i.cartItemId !== cartItemId);
+      }
+      localStorage.setItem('king_cart_items', JSON.stringify(cart));
+      updateCartBadge();
+      renderCartPage();
+      renderProducts();
+      renderBestSellers();
+    }
+
+    function clearCart() {
+      cart = [];
+      localStorage.removeItem('king_cart_items');
+      updateCartBadge();
+      renderCartPage();
+      renderProducts();
+      renderBestSellers();
+    }
+
+    function updateCartBadge() {
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      document.getElementById('header-cart-count').innerText = totalItems;
+    }
+
+    function renderCartPage() {
+      const cartContainer = document.getElementById('cart-items-page');
+      if (cart.length === 0) {
+        cartContainer.innerHTML = `<p class="text-center text-slate-400 py-6 text-xs">Keranjang masih kosong.<br>Silakan pilih produk di menu Katalog.</p>`;
+        document.getElementById('total-items-count-page').innerText = "0 Jenis";
+        document.getElementById('total-qty-count-page').innerText = "0 Lusin";
+        document.getElementById('ongkir-estimate-box').style.display = 'none';
+        document.getElementById('total-estimation-row').style.display = 'none';
+        return;
+      }
+      cartContainer.innerHTML = cart.map(item => `
+        <div class="flex items-center justify-between bg-slate-50 p-2.5 rounded-xl border border-slate-200">
+          <img src="${item.img}" onerror="this.src='https://via.placeholder.com/50'" class="w-10 h-10 object-contain rounded-lg bg-white border p-0.5 mr-2">
+          <div class="flex-1 pr-2">
+            <h4 class="font-bold text-xs text-slate-800">${item.name}</h4>
+            <p class="text-[9px] text-blue-600 font-semibold">${item.category}</p>
+          </div>
+          <div class="flex items-center gap-1 bg-white border rounded-lg p-1 shadow-sm">
+            <button onclick="updateQty('${item.cartItemId}', -1)" class="w-6 h-6 bg-slate-100 font-bold text-slate-700 rounded text-xs">-</button>
+            <span class="w-6 text-center text-xs font-black text-blue-800">${item.qty}</span>
+            <button onclick="updateQty('${item.cartItemId}', 1)" class="w-6 h-6 bg-blue-600 font-bold text-white rounded text-xs">+</button>
+          </div>
+        </div>
+      `).join('');
+      updateCartPageTotals();
+    }
+
+    function updateCartPageTotals() {
+      let totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+      document.getElementById('total-items-count-page').innerText = cart.length + " Jenis";
+      document.getElementById('total-qty-count-page').innerText = totalQty + " Lusin";
+      if (currentOngkirPerLusin > 0 && totalQty > 0) {
+        let totalOngkir = currentOngkirPerLusin * totalQty;
+        document.getElementById('total-with-ongkir-text').innerText = `Rp ${totalOngkir.toLocaleString('id-ID')}`;
+      }
+    }
+
+    function removeShake(elem) { elem.classList.remove('shake-input'); }
+
+    function processOrderWA() {
+      if (cart.length === 0) { alert("Daftar pesanan masih kosong!"); return; }
+      const inputName = document.getElementById('input-customer-name');
+      const inputPlace = document.getElementById('input-customer-place');
+      let name = inputName.value.trim().toUpperCase();
+      let place = inputPlace.value.trim().toUpperCase();
+
+      let hasError = false;
+      if (!name) { inputName.classList.add('shake-input'); hasError = true; }
+      if (!place) { inputPlace.classList.add('shake-input'); hasError = true; }
+      if (hasError) { alert("Mohon lengkapi Nama Pemesan dan Tempat Tujuan!"); return; }
+
+      const bonNumber = "#ORD-" + Math.floor(1000 + Math.random() * 9000);
+      const timeString = new Date().toLocaleString('id-ID');
+      let totalLusin = cart.reduce((s, i) => s + i.qty, 0);
+
+      let msg = `*PESANAN GROSIR - KING KAUS KAKI*\nNo. Order: *${bonNumber}*\nPemesan: *${name}*\nTujuan: *${place}*\n\n*DAFTAR BARANG:*\n`;
+      cart.forEach((i, idx) => { msg += `${idx + 1}. ${i.name} = ${i.qty} Lsn\n`; });
+      msg += `\n*TOTAL: ${totalLusin} LUSIN*`;
+
+      if (currentOngkirPerLusin > 0) {
+        msg += `\nEstimasi Ongkir: Rp ${(currentOngkirPerLusin * totalLusin).toLocaleString('id-ID')}`;
+      }
+
+      transactions.unshift({ id: bonNumber, date: timeString, customerName: name, customerPlace: place, items: [...cart], totalLusin: totalLusin });
+      localStorage.setItem('pos_transactions', JSON.stringify(transactions));
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+      clearCart();
+      switchTab('kasir');
+    }
+
+    function renderTransactionsTable() {
+      const tbody = document.getElementById('transactions-table-body');
+      if (transactions.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="5" class="p-6 text-center text-slate-400">Belum ada riwayat pesanan.</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = transactions.map(t => `
+        <tr class="hover:bg-slate-50">
+          <td class="p-2 font-bold text-blue-800">${t.id}</td>
+          <td class="p-2 text-slate-500">${t.date}</td>
+          <td class="p-2 font-semibold text-slate-800">${t.customerName} (${t.customerPlace})</td>
+          <td class="p-2 text-center font-bold text-blue-600">${t.totalLusin} Lusin</td>
+          <td class="p-2 text-center"><button onclick="showBonDetail('${t.id}')" class="bg-blue-600 text-white px-2.5 py-1 rounded text-[10px]">Detail</button></td>
+        </tr>
+      `).join('');
+    }
+
+    function showBonDetail(bonId) {
+      const tx = transactions.find(t => t.id === bonId);
+      if (!tx) return;
+      document.getElementById('detail-bon-title').innerText = `Rincian: ${tx.id} — ${tx.customerName} (${tx.customerPlace})`;
+      document.getElementById('detail-bon-date').innerText = `Waktu: ${tx.date}`;
+      document.getElementById('detail-bon-body').innerHTML = tx.items.map(item => `
+        <tr>
+          <td class="p-2"><img src="${item.img}" onerror="this.src='https://via.placeholder.com/40'" class="w-7 h-7 object-contain rounded border"></td>
+          <td class="p-2 font-bold text-slate-800">${item.name}</td>
+          <td class="p-2 text-center font-bold text-blue-600">${item.qty} Lusin</td>
+        </tr>
+      `).join('');
+      document.getElementById('bon-detail-card').style.display = 'block';
+    }
+
+    function clearAllTransactions() {
+      if (confirm("Hapus semua riwayat transaksi?")) {
+        transactions = [];
+        localStorage.removeItem('pos_transactions');
+        renderTransactionsTable();
+        document.getElementById('bon-detail-card').style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
