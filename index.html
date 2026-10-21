@@ -30,14 +30,14 @@
     }
   </style>
 </head>
-<body class="bg-slate-100 font-sans text-slate-800 min-h-screen flex flex-col">
+<body class="bg-slate-100 font-sans text-slate-800 min-h-screen flex flex-col overflow-x-hidden">
 
   <!-- ================= HALAMAN 1: LANDING PAGE / LINKTREE ================= -->
-  <div id="view-landing" class="flex-1 flex flex-col items-center justify-start bg-white min-h-screen pb-10">
+  <div id="view-landing" class="flex-1 flex flex-col items-center justify-start bg-white min-h-screen pb-10 w-full">
     
     <!-- FOTO UTAMA / BANNER -->
     <div class="w-full max-w-md bg-slate-200 overflow-hidden shadow-sm relative aspect-[16/10]">
-      <img src="img/kingawal.png" onerror="this.src='https://via.placeholder.com/600x400?text=KING+KAUS+KAKI'" class="w-full h-full object-cover">
+      <img src="img/kingawal.png" onerror="this.src='https://via.placeholder.com/600x400?text=KING+KAUS+KAKI'" class="w-full h-full object-contain p-2">
     </div>
 
     <!-- KONTEN PROFIL & INFO -->
@@ -53,53 +53,43 @@
         <div class="flex items-center gap-2"><span>🚚</span> <span class="font-medium">Pengiriman Medan - Aceh & se-Sumatera</span></div>
       </div>
 
-      <p class="text-xs font-bold text-slate-600 pt-1">👇 Pilih tautan di bawah ini 👇</p>
+      <p class="text-xs font-bold text-slate-600 pt-1">👇 Pilih tautan di bawah ini:</p>
 
-      <!-- TOMBOL-TOMBOL MENU UTAMA DENGAN WARNA SESUAI APLIKASI -->
+      <!-- TOMBOL-TOMBOL MENU UTAMA -->
       <div class="space-y-2.5 pt-1">
-        
-        <!-- MASUK KE KATALOG PESANAN (WARNA KHUSUS KING KAUS KAKI) -->
         <button onclick="goToApp()" class="w-full bg-blue-900 hover:bg-blue-800 text-amber-400 border-2 border-amber-400 font-black py-3 px-4 rounded-xl shadow-md text-xs flex items-center justify-center gap-2 transition active:scale-95">
-          <span>🛒</span> BUKA KATALOG KING
+          <span>🛒</span> BUKA KATALOG & ORDER GROSIR
         </button>
 
-        <!-- WHATSAPP (WARNA HIJAU EMERALD) -->
         <a href="https://wa.me/6285176757424" target="_blank" class="w-full bg-white hover:bg-emerald-50 text-emerald-600 border-2 border-emerald-500 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
           <span>💬</span> WHATSAPP
         </a>
 
-        <!-- TIKTOK (WARNA HITAM) -->
         <a href="https://www.tiktok.com/@kingkauskaki" target="_blank" class="w-full bg-white hover:bg-slate-100 text-slate-900 border-2 border-slate-900 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
           <span>🎵</span> TIKTOK
         </a>
 
-        <!-- INSTAGRAM (WARNA ROSE / PINK) -->
         <a href="https://www.instagram.com/kingkauskaki" target="_blank" class="w-full bg-white hover:bg-rose-50 text-rose-600 border-2 border-rose-500 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
           <span>📸</span> INSTAGRAM
         </a>
 
-        <!-- FACEBOOK (WARNA BIRU FACEBOOK) -->
         <a href="https://www.facebook.com/kingkauskaki" target="_blank" class="w-full bg-white hover:bg-blue-50 text-blue-600 border-2 border-blue-600 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
           <span>👥</span> FACEBOOK
         </a>
 
-        <!-- ALAMAT GOOGLE MAPS (WARNA MERAH MAPS) -->
-        <a href="https://maps.app.goo.gl/Xk1WiWPVFU6ADHfe7" target="_blank" class="w-full bg-white hover:bg-red-50 text-red-600 border-2 border-red-500 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
+        <a href="https://maps.app.goo.gl/YHex5a11M2iBkmyf8" target="_blank" class="w-full bg-white hover:bg-red-50 text-red-600 border-2 border-red-500 font-black py-3 px-4 rounded-xl shadow-sm text-xs flex items-center justify-center gap-2 transition active:scale-95">
           <span>📍</span> ALAMAT KING KAUSKAKI
         </a>
-
       </div>
     </div>
   </div>
 
 
   <!-- ================= APLIKASI UTAMA (KATALOG & KERANJANG) ================= -->
-  <div id="main-app-container" style="display: none;" class="flex-1 flex flex-col min-h-screen pb-16">
+  <div id="main-app-container" style="display: none;" class="flex-1 flex flex-col min-h-screen pb-16 w-full">
 
     <!-- HEADER UTAMA -->
-    <header class="bg-white text-slate-800 px-3 py-2 border-b sticky top-0 z-40 shadow-sm flex items-center justify-between gap-2">
-      
-      <!-- KIRI: TOMBOL KEMBALI KE HALAMAN UTAMA & LOGO -->
+    <header class="bg-white text-slate-800 px-3 py-2 border-b sticky top-0 z-40 shadow-sm flex items-center justify-between gap-2 w-full">
       <div class="flex items-center gap-2 shrink-0">
         <button onclick="backToLanding()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 p-1.5 rounded-xl text-xs font-bold flex items-center gap-1 transition border" title="Kembali ke Beranda">
           <span>🏠</span>
@@ -107,16 +97,15 @@
         <div class="bg-blue-900 text-amber-400 p-1.5 rounded-xl font-black text-xs">👑</div>
         <div>
           <h2 class="text-xs sm:text-sm font-black tracking-wider text-slate-900 uppercase">KING KAUS KAKI</h2>
-          <p class="text-[8px] sm:text-[9px] text-slate-500 font-semibold">Jl.Sutomo No.264/640,Kota Medan</p>
+          <p class="text-[8px] sm:text-[9px] text-slate-500 font-semibold">Jl. Sutomo No.264/640, Pandau Hilir, Kec. Medan perjuangan, Kota Medan</p>
         </div>
       </div>
 
-      <!-- KANAN: PENCARIAN & KERANJANG -->
       <div class="flex items-center gap-1.5 shrink-0">
         <div class="relative flex items-center">
           <input type="text" id="search-input" oninput="renderProducts()" placeholder="Cari barang..." 
-            class="w-8 focus:w-36 sm:focus:w-48 bg-slate-100 border rounded-full pl-8 pr-2 py-1 text-xs font-medium text-slate-700 transition-all duration-300 focus:outline-none focus:border-blue-600 focus:bg-white cursor-pointer focus:cursor-text">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-slate-500 absolute left-2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            class="w-24 sm:w-48 bg-slate-100 border rounded-full pl-7 pr-2 py-1 text-xs font-medium text-slate-700 transition-all focus:outline-none focus:border-blue-600 focus:bg-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-slate-500 absolute left-2 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
         </div>
@@ -157,46 +146,46 @@
     </aside>
 
     <!-- TAMPILAN KASIR / KATALOG -->
-    <div id="view-kasir" class="flex-1 flex flex-col pb-16">
-      <div class="bg-gradient-to-r from-pink-100 via-rose-50 to-amber-50 p-3 border-b border-pink-200 text-center">
-        <div class="max-w-xl mx-auto space-y-0.5">
-          <span class="text-[9px] font-bold tracking-widest text-rose-600 uppercase bg-rose-100 px-2 py-0.5 rounded-full">KATALOG KING</span>
+    <div id="view-kasir" class="flex-1 flex flex-col pb-16 w-full">
+      <div class="bg-gradient-to-r from-pink-100 via-rose-50 to-amber-50 p-3 border-b border-pink-200 text-center w-full">
+        <div class="w-full space-y-0.5">
+          <span class="text-[9px] font-bold tracking-widest text-rose-600 uppercase bg-rose-100 px-2 py-0.5 rounded-full">KATALOG GROSIR</span>
           <h3 class="text-xs font-black text-slate-800 uppercase">PUSAT GROSIR KAUS KAKI TERLENGKAP</h3>
         </div>
       </div>
 
       <!-- SLIDER PRODUK TERLARIS -->
-      <div class="bg-white p-3 border-b">
+      <div class="bg-white p-2.5 border-b w-full">
         <div class="flex items-center justify-between mb-1.5">
           <h4 class="font-black text-xs uppercase tracking-wider text-amber-600 flex items-center gap-1">
-            <span>🔥</span> Produk Terlaris 
+            <span>🔥</span> Produk Terlaris (A-Z)
           </h4>
         </div>
-        <div id="best-seller-slider" class="flex gap-2.5 overflow-x-auto pb-1 custom-scroll whitespace-nowrap"></div>
+        <div id="best-seller-slider" class="flex gap-2 overflow-x-auto pb-1 custom-scroll whitespace-nowrap w-full"></div>
       </div>
 
       <!-- FILTER LABEL BARANG -->
-      <div class="bg-slate-50 px-3 py-2 border-b">
-        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 custom-scroll whitespace-nowrap text-[11px]">
+      <div class="bg-slate-50 px-2.5 py-2 border-b w-full">
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-0.5 custom-scroll whitespace-nowrap text-[11px]">
           <span class="font-bold text-slate-500 mr-1 text-[10px]">Filter:</span>
           <button onclick="setFilterTag('semua')" id="tag-semua" class="px-2.5 py-1 rounded-full bg-blue-600 text-white font-bold transition shadow-sm">Semua</button>
-          <button onclick="setFilterTag('obral')" id="tag-obral" class="px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100">🏷️ Obral (< Rp 45rb)</button>
-          <button onclick="setFilterTag('standar')" id="tag-standar" class="px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100">⚡ Standar (45rb - 52rb)</button>
-          <button onclick="setFilterTag('premium')" id="tag-premium" class="px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100">👑 Premium (> Rp 52rb)</button>
+          <button onclick="setFilterTag('obral')" id="tag-obral" class="px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100">🏷️ Obral (< Rp 50rb)</button>
+          <button onclick="setFilterTag('standar')" id="tag-standar" class="px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100">⚡ Standar (50rb - 100rb)</button>
+          <button onclick="setFilterTag('premium')" id="tag-premium" class="px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100">👑 Premium (> Rp 100rb)</button>
           <button onclick="setFilterTag('terlaris')" id="tag-terlaris" class="px-2.5 py-1 rounded-full bg-white border border-slate-300 text-slate-700 font-bold transition hover:bg-slate-100">🔥 Terlaris</button>
         </div>
       </div>
 
-      <main class="flex-1 p-2 sm:p-3 bg-slate-100 w-full">
-        <div class="grid grid-cols-2 gap-2 w-full" id="product-grid"></div>
+      <main class="flex-1 p-2 bg-slate-100 w-full">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 w-full" id="product-grid"></div>
       </main>
     </div>
 
     <!-- TAMPILAN KERANJANG -->
-    <div id="view-keranjang" class="flex-1 p-3 sm:p-6 bg-slate-50 max-w-3xl mx-auto w-full pb-20" style="display: none;">
-      <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col space-y-3 p-4">
+    <div id="view-keranjang" class="flex-1 p-3 bg-slate-50 w-full pb-20" style="display: none;">
+      <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden flex flex-col space-y-3 p-4 max-w-3xl mx-auto w-full">
         <div class="flex justify-between items-center border-b pb-3">
-          <h2 class="text-sm sm:text-base font-bold flex items-center gap-1.5"><span>🛒</span> Daftar Pesanan (Lusin)</h2>
+          <h2 class="text-sm font-bold flex items-center gap-1.5"><span>🛒</span> Daftar Pesanan (Lusin)</h2>
           <button onclick="clearCart()" class="text-[11px] bg-red-50 hover:bg-red-100 text-red-600 px-2.5 py-1 rounded-lg font-semibold transition border border-red-200">Kosongkan Keranjang</button>
         </div>
 
@@ -212,7 +201,7 @@
               <input type="text" id="input-customer-name" oninput="removeShake(this)" placeholder="Ketik nama toko/pemesan..." class="w-full bg-white border rounded-lg px-2.5 py-1.5 text-xs focus:outline-blue-600 font-semibold uppercase">
             </div>
             <div>
-              <label class="block text-[10px] font-bold text-slate-700 mb-1">Tempat / Kota Tujuan (Pengiriman Medan): <span class="text-red-500">*</span></label>
+              <label class="block text-[10px] font-bold text-slate-700 mb-1">Tempat / Kota Tujuan: <span class="text-red-500">*</span></label>
               <input type="text" id="input-customer-place" oninput="removeShake(this); calculateEstimatedOngkir();" placeholder="Ketik kota tujuan..." class="w-full bg-white border rounded-lg px-2.5 py-1.5 text-xs focus:outline-blue-600 font-semibold uppercase">
             </div>
           </div>
@@ -251,9 +240,9 @@
     </div>
 
     <!-- TAMPILAN RIWAYAT -->
-    <div id="view-laporan" class="flex-1 p-4 bg-slate-50 pb-20" style="display: none;">
-      <div class="max-w-6xl mx-auto space-y-4">
-        <div class="bg-white rounded-xl shadow p-4">
+    <div id="view-laporan" class="flex-1 p-3 bg-slate-50 pb-20 w-full" style="display: none;">
+      <div class="max-w-6xl mx-auto space-y-4 w-full">
+        <div class="bg-white rounded-xl shadow p-3">
           <div class="flex justify-between items-center mb-3 pb-2 border-b">
             <h2 class="text-sm font-bold text-slate-800">📋 Riwayat Orderan Lokal</h2>
             <button onclick="clearAllTransactions()" class="text-[10px] bg-red-50 text-red-600 px-2.5 py-1 rounded border border-red-200 hover:bg-red-100 font-semibold">Hapus Riwayat</button>
@@ -274,7 +263,7 @@
           </div>
         </div>
 
-        <div id="bon-detail-card" class="bg-white rounded-xl shadow p-4" style="display: none;">
+        <div id="bon-detail-card" class="bg-white rounded-xl shadow p-3" style="display: none;">
           <div class="flex justify-between items-center mb-3 pb-2 border-b">
             <div>
               <h3 class="text-xs font-bold text-blue-900" id="detail-bon-title">Rincian Order</h3>
@@ -297,7 +286,7 @@
     </div>
 
     <!-- BOTTOM NAVIGATION BAR -->
-    <nav id="bottom-nav" class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-lg z-40 flex justify-around items-center h-14 px-2 transition-transform duration-300">
+    <nav id="bottom-nav" class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-lg z-40 flex justify-around items-center h-14 px-2 transition-transform duration-300 w-full">
       <button onclick="switchTab('kasir')" id="tab-kasir" class="flex flex-col items-center justify-center flex-1 text-blue-700 font-bold transition">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -342,18 +331,434 @@
     const WHATSAPP_NUMBER = "6285176757424"; 
 
     const sidebarCategoryData = [
-      { name: "SEMUA", group: "SEMUA", img: "img/logo.png" },
-      { name: "SEKOLAH", group: "SEKOLAH", img: "img/FINI_HITAM.png" },
-      { name: "BABY", group: "BABY", img: "img/ARVIO_HITAM.png" },
-      { name: "KANTOR", group: "dewasa", img: "img/TCHW.png" },
-      { name: "KASUAL", group: "dewasa", img: "img/KAKIBRO_CATUR.png" },
-      { name: "MUSLIM", group: "MUSLIM", img: "img/SCP_PUTIH.png" },
-      { name: "SPORT", group: "SPORT", img: "img/FLEXIBALL.png" },
-      { name: "HANDSOCK", group: "HANDSOCK", img: "img/YUTAKA_MANSET_HITAM.png" },
-      { name: "SARUNG TANGAN", group: "SRT", img: "img/YUTAKA_SRT_HT.png" }
+      { name: "Semua", group: "semua", img: "img/logo.png" },
+      { name: "SEKOLAH", group: "sekolah", img: "img/FINI_HITAM.png" },
+      { name: "BABY", group: "sekolah", img: "img/ARVIO_HITAM.png" },
+      { name: "DWS KANTOR", group: "dewasa", img: "img/TCHW.png" },
+      { name: "DWS KASUAL", group: "dewasa", img: "img/KAKIBRO_CATUR.png" },
+      { name: "MUSLIM", group: "dewasa", img: "img/SCP_PUTIH.png" },
+      { name: "SPORT", group: "dewasa", img: "img/FLEXIBALL.png" },
+      { name: "HANDSOCK", group: "dewasa", img: "img/SCPW_WARNA.png" }
     ];
 
     const products = [
+                { 
+        id: 501, 
+        name: "ALIPO BOLA LIRIS", 
+        category: "SPORT", 
+        priceDisplay: "50RB AN",
+        minPrice: 50000,
+        maxPrice: 55000,
+        isBestSeller: true, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/ALIPO_LIRIS.png",
+        variants: [
+          { 
+            name: "ALIPO BOLA LIRIS", 
+            img: "img/ALIPO_LIRIS.png",
+            subVariants: ["Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 502, 
+        name: "ARVIO BOLA NYLN", 
+        category: "SPORT", 
+        priceDisplay: "100RB AN",
+        minPrice: 105000,
+        maxPrice: 105000,
+        isBestSeller: false,
+        desc: "Kaus kaki bola.",
+        mainImg: "img/ARVIO_BOLA_NYLN.jpg",
+        variants: [
+          { 
+            name: "ARVIO BOLA NYLN", 
+            img: "img/ARVIO_BOLA_NYLN.jpg",
+            subVariants: ["Free size"] 
+          }
+        ]
+      },
+      { 
+        id: 503, 
+        name: "ARVIO BOLA POLY", 
+        category: "SPORT",
+        priceDisplay: "100RB AN",
+        minPrice: 105000,
+        maxPrice: 105000,
+        isBestSeller: false,
+        desc: "Kaus kaki bola.",
+        mainImg: "img/ARVIO_BOLA_POLY.jpg",
+        variants: [
+          { 
+            name: "ARVIO BOLA POLY", 
+            img: "img/ARVIO_BOLA_POLY.jpg",
+            subVariants: ["HITAM","PUTIH"] 
+          }
+        ]
+      },
+      { 
+        id: 504, 
+        name: "ARVIO BOLA NYLON-N", 
+        category: "SPORT",
+        priceDisplay: "200RB AN",
+        minPrice: 200000,
+        maxPrice: 205000,
+        isBestSeller: false,
+        desc: "Kaus kaki bola.",
+        mainImg: "img/ARVIO_NYLON-N.jpeg",
+        variants: [
+          { 
+            name: "ARVIO BOLA NYLON-N", 
+            img: "img/ARVIO_NYLON-N.jpeg",
+            subVariants: ["HITAM","PUTIH","BIRU","ORANGE","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 505, 
+        name: "ARVIO BOLA POLY N", 
+        category: "SPORT", 
+        priceDisplay: "105RB AN",
+        minPrice: 105000,
+        maxPrice: 105000,
+        isBestSeller: false, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/ARVIO_POLY_N.png",
+        variants: [
+          { 
+            name: "ARVIO BOLA POLY N", 
+            img: "img/ARVIO_POLY_N.png",
+            subVariants: ["HITAM","HIJAU","BIRU","KUNING","MERAH","ORANGE","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 506, 
+        name: "ARVIO BOLA POLY V", 
+        category: "SPORT", 
+        isBestSeller: true, 
+        priceDisplay: "100RB AN",
+        minPrice: 105000,
+        maxPrice: 105000,
+        isBestSeller: false,
+        desc: "Kaus kaki bola.",
+        mainImg: "img/ARVIO_POLY_V.png",
+        variants: [
+          { 
+            name: "ARVIO BOLA POLY V", 
+            img: "img/ARVIO_POLY_V.png",
+            subVariants: ["HITAM","HIJAU","BIRU","KUNING","MERAH","ORANGE","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 507, 
+        name: "ARVIO BOLA POLY WARNA", 
+        category: "SPORT", 
+        priceDisplay: "100RB AN",
+        minPrice: 105000,
+        maxPrice: 105000,
+        isBestSeller: false, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/ARVIO_POLY_WR.jpg",
+        variants: [
+          { 
+            name: "ARVIO BOLA POLY WARNA", 
+            img: "img/ARVIO_POLY_WR.jpg",
+            subVariants: ["HIJAU","BIRU","ORANGE","MERAH","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 508, 
+        name: "ARVIO BOLA SAMBUNG ANAK", 
+        category: "SPORT", 
+        priceDisplay: "130RB AN",
+        minPrice: 130000,
+        maxPrice: 135000,
+        isBestSeller: false, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/ARVIO_SAMBUNG_ANAK.png",
+        variants: [
+          { 
+            name: "ARVIO BOLA POLY WARNA", 
+            img: "img/ARVIO_SAMBUNG_ANAK.png",
+            subVariants: ["HITAM","PUTIH","BIRU","MERAH","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 509, 
+        name: "ARVIO BOLA SAMBUNG TGG", 
+        category: "SPORT",
+        priceDisplay: "150RB AN",
+        minPrice: 150000,
+        maxPrice: 155000, 
+        isBestSeller: false, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/ARVIO_SAMBUNG_TGG.png",
+        variants: [
+          { 
+            name: "ARVIO BOLA SAMBUNG TGG", 
+            img: "img/ARVIO_SAMBUNG_TGG.png",
+            subVariants: ["HITAM","PUTIH","BIRU","MERAH","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 510, 
+        name: "ARVIO BOLA SAMBUNG", 
+        category: "SPORT", 
+        priceDisplay: "170RB AN",
+        minPrice: 170000,
+        maxPrice: 175000,
+        isBestSeller: false, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/ARVIO_SAMBUNG.jpeg",
+        variants: [
+          { 
+            name: "ARVIO BOLA SAMBUNG", 
+            img: "img/ARVIO_SAMBUNG.jpeg",
+            subVariants: ["HITAM","PUTIH","MERAH","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 511, 
+        name: "FINI BOLA EURO", 
+        category: "SPORT", 
+        priceDisplay: "90RB AN",
+        minPrice: 90000,
+        maxPrice: 96000,
+        isBestSeller: true, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/FINI_EURO.png",
+        variants: [
+          { 
+            name: "FINI BOLA EURO", 
+            img: "img/FINI_EURO.png",
+            subVariants: ["KUNING","HIJAU","MERAH","HITAM","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 512, 
+        name: "FINI BOLA INDO 1", 
+        category: "SPORT", 
+        priceDisplay: "90RB AN",
+        minPrice: 90000,
+        maxPrice: 95000, 
+        isBestSeller: false, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/FINI_INDO1.jpeg",
+        variants: [
+          { 
+            name: "FINI BOLA INDO 1", 
+            img: "img/FINI_INDO1.jpeg",
+            subVariants: ["BIRU","PUTIH","MERAH","HITAM","HIJAU","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 513, 
+        name: "FINI BOLA INDO 2", 
+        category: "SPORT", 
+        priceDisplay: "90RB AN",
+        minPrice: 90000,
+        maxPrice: 95000, 
+        isBestSeller: false, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/FINI_INDO2.jpeg",
+        variants: [
+          { 
+            name: "FINI BOLA INDO 2", 
+            img: "img/FINI_INDO2.jpeg",
+            subVariants: ["HIJAU","MERAH","BIRU","HITAM","PUTIH","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 514, 
+        name: "FINI BOLA POLOS", 
+        category: "SPORT",
+        priceDisplay: "60RB AN",
+        minPrice: 60000,
+        maxPrice: 54000,  
+        isBestSeller: false, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/FINI_L_HITAM.jpg",
+        variants: [
+          { 
+            name: "FINI BOLA HITAM", 
+            img: "img/FINI_L_HITAM.jpg",
+            subVariants: ["Free size"] 
+          },
+          { 
+            name: "FINI BOLA PUTIH", 
+            img: "img/FINI_L_PUTIH.jpeg",
+            subVariants: ["Free Size"] 
+          }
+        ]
+      },
+      { 
+        id: 515, 
+        name: "FINI BOLA LIRIS", 
+        category: "SPORT", 
+        priceDisplay: "60RB AN",
+        minPrice: 60000,
+        maxPrice: 65000, 
+        isBestSeller: true, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/FINI_L_LIRIS.jpeg",
+        variants: [
+          { 
+            name: "FINI BOLA LIRIS", 
+            img: "img/FINI_L_LIRIS.jpeg",
+            subVariants: ["ORANGE","KUNING","MERAH","HIJAU","BIRU","HITAM","Campur Warna"] 
+          },
+        ]
+      },
+      { 
+        id: 516, 
+        name: "VIERI BOLA LIRIS", 
+        category: "SPORT", 
+        priceDisplay: "60RB AN",
+        minPrice: 60000,
+        maxPrice: 64000, 
+        isBestSeller: true, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/VIERI_LIRIS.png",
+        variants: [
+          { 
+            name: "VIERI BOLA LIRIS", 
+            img: "img/VIERI_LIRIS.png",
+            subVariants: ["HITAM","ORANGE","HIJAU","MERAH","KUNING","BIRU","Campur Warna"] 
+          },
+        ]
+      },
+      { 
+        id: 517, 
+        name: "VIERI BOLA POLOS", 
+        category: "SPORT", 
+        priceDisplay: "60RB AN",
+        minPrice: 60000,
+        maxPrice: 64000, 
+        isBestSeller: false, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/VIERI_POLOS.jpg",
+        variants: [
+          { 
+            name: "VIERI BOLA POLOS", 
+            img: "img/VIERI_POLOS.jpg",
+            subVariants: ["HITAM","PUTIH"] 
+          },
+          { 
+            name: "VIERI BOLA POLOS WARNA", 
+            img: "img/VIERI_POLOS_WARNA.jpg",
+            subVariants: ["BIRU","KUNING","HIJAU","ORANGE","MERAH","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 518, 
+        name: "VIERI BOLA STRIPE", 
+        category: "SPORT",
+        priceDisplay: "60RB AN",
+        minPrice: 60000,
+        maxPrice: 64000, 
+        isBestSeller: false, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/VIERI_STRIPE.png",
+        variants: [
+          { 
+            name: "VIERI BOLA STRIPE", 
+            img: "img/VIERI_STRIPE.png",
+            subVariants: ["Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 519, 
+        name: "WORLD BOLA TANDUK", 
+        category: "SPORT", 
+        priceDisplay: "90RB AN",
+        minPrice: 90000,
+        maxPrice: 105000,
+        isBestSeller: false, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/WORLD_TANDUK.jpg",
+        variants: [
+          { 
+            name: "WORLD BOLA [L] TANDUK ", 
+            img: "img/WORLD_TANDUK.jpg",
+            subVariants: ["ORANGE","HIJAU","MERAH","HIJAU","KUNING","BIRU","Campur Warna"] 
+          },
+          { 
+            name: "WORLD BOLA [M] TANDUK ", 
+            img: "img/WORLD_TANDUK.jpg",
+            subVariants: ["ORANGE","HIJAU","MERAH","HIJAU","KUNING","BIRU","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 520, 
+        name: "WORLD BOLA BALL ", 
+        category: "SPORT", 
+        priceDisplay: "90RB AN",
+        minPrice: 90000,
+        maxPrice: 105000,
+        isBestSeller: false, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/WORLD_BALL.jpg",
+        variants: [
+          { 
+            name: "WORLD BOLA [L] TANDUK ", 
+            img: "img/WORLD_BALL.jpg",
+            subVariants: ["ORANGE","HIJAU","MERAH","HIJAU","KUNING","BIRU","Campur Warna"] 
+          },
+          { 
+            name: "WORLD BOLA [M] BALL ", 
+            img: "img/WORLD_BALL.jpg",
+            subVariants: ["ORANGE","HIJAU","MERAH","HIJAU","KUNING","BIRU","Campur Warna"] 
+          }
+        ]
+      },
+      { 
+        id: 521, 
+        name: "YUTAKA BOLA LIRIS", 
+        category: "SPORT", 
+        priceDisplay: "60RB AN",
+        minPrice: 60000,
+        maxPrice: 60000,
+        isBestSeller: true, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/YUTAKA_LIRIS.jpeg",
+        variants: [
+          { 
+            name: "YUTAKA BOLA LIRIS", 
+            img: "img/YUTAKA_LIRIS.jpeg",
+            subVariants: ["BIRU","HITAM","KUNING","HIJAU","Campur Warna"] 
+          },
+        ]
+      },
+      { 
+        id: 522, 
+        name: "YUTAKA BOLA PRO", 
+        category: "SPORT", 
+        priceDisplay: "70RB AN",
+        minPrice: 70000,
+        maxPrice: 70000,
+        isBestSeller: true, 
+        desc: "Kaus kaki bola.",
+        mainImg: "img/YUTAKA_PRO.jpeg",
+        variants: [
+          { 
+            name: "YUTAKA BOLA PRO", 
+            img: "img/YUTAKA_PRO.jpeg",
+            subVariants: ["BIRU","ORANGE","MERAH","MERAH","HIJAU","HITAM","Campur Warna"] 
+          },
+        ]
+      },
       { 
         id: 101, 
         name: "ARVIO SEKOLAH", 
@@ -486,7 +891,7 @@
         id: 109, 
         name: "YUTAKA SEKOLAH", 
         category: "SEKOLAH",
-         priceDisplay: "35RB AN",
+        priceDisplay: "35RB AN",
         minPrice: 35000,
         maxPrice: 45000,
         isBestSeller: true, 
@@ -569,126 +974,6 @@
         mainImg: "img/TCHW.png",
         variants: [
           { name: "TCHW", img: "img/TCHW.png", subVariants: ["Ukuran 15-16","Ukuran 17-18", "Ukuran 19-20", "Ukuran 21-22", "Ukuran 23-24", "Ukuran 25-26"] }
-        ]
-      },
-      { 
-        id: 201, 
-        name: "YUTAKA MANSET", 
-        category: "HANDSOCK",
-        priceDisplay: "70RB AN",
-        minPrice: 73000,
-        maxPrice: 730000, 
-        isBestSeller: true, 
-        desc: "MANSET TANGAN.",
-        mainImg: "img/YUTAKA_MANSET_HITAM.png",
-        variants: [
-          { 
-            name: "YUTAKA MANSET HITAM", 
-            img: "img/YUTAKA_MANSET_HITAM.png",
-            subVariants: ["FREE SIZE"] 
-          },
-          { 
-            name: "YUTAKA MANSET PUTIH", 
-            img: "img/YUTAKA_MANSET_PT.png",
-            subVariants: ["FREE SIZE"] 
-          },
-          { 
-            name: "YUTAKA MANSET COKLAT", 
-            img: "img/YUTAKA_MANSET_CK.png",
-            subVariants: ["FREE SIZE"] 
-          }
-        ]
-      },
-      { 
-        id: 202, 
-        name: "JAMIILATUN HANDSOCKS", 
-        category: "HANDSOCK", 
-        priceDisplay: "50RB AN",
-        minPrice: 55000,
-        maxPrice: 55000,
-        isBestSeller: true, 
-        desc: "HANDSOCKS.",
-        mainImg: "img/JAMIILATUN_HDS_PT.png",
-        variants: [
-          { 
-            name: "JAMIILATUN HDS PUTIH", 
-            img: "img/JAMIILATUN_HDS_PT.png",
-            subVariants: ["FREE SIZE"] 
-          },
-          { 
-            name: "JAMIILATUN HDS HITAM", 
-            img: "img/JAMIILATUN_HDS_HT.png",
-            subVariants: ["FREE SIZE"] 
-          },
-          { 
-            name: "JAMIILATUN HDS CREAM", 
-            img: "img/JAMIILATUN_HDS_CR.png",
-            subVariants: ["FREE SIZE"] 
-          }
-        ]
-      },
-      { 
-        id: 301, 
-        name: "YUTAKA SRT HITAM", 
-        category: "SARUNG TANGAN", 
-        priceDisplay: "80RB AN",
-        minPrice: 80000,
-        maxPrice: 80000,
-        isBestSeller: true, 
-        desc: "SARUNG TANGAN",
-        mainImg: "img/YUTAKA_SRT_HT.jpg",
-        variants: [
-          { 
-            name: "YUTAKA SRT HITAM", 
-            img: "img/YUTAKA_SRT_HT.jpg",
-            subVariants: ["FREE SIZE"] 
-          },
-          { 
-            name: "YUTAKA SRT HITAM 1/2 JARI", 
-            img: "img/YUTAKA_SRT_HT_1.2.jpg",
-            subVariants: ["FREE SIZE"] 
-          }
-        ]
-      },
-      { 
-        id: 302, 
-        name: "YUTAKA SRT MISTY", 
-        category: "SARUNG TANGAN", 
-        priceDisplay: "80RB AN",
-        minPrice: 80000,
-        maxPrice: 80000,
-        isBestSeller: true, 
-        desc: "SARUNG TANGAN",
-        mainImg: "img/YUTAKA_SRT_MISTI.png",
-        variants: [
-          { 
-            name: "YUTAKA SRT MISTY", 
-            img: "img/YUTAKA_SRT_MISTI.png",
-            subVariants: ["FREE SIZE"] 
-          },
-          { 
-            name: "YUTAKA SRT MISTY 1/2 JARI", 
-            img: "img/YUTAKA_SRT_MISTI1.2.png",
-            subVariants: ["FREE SIZE"] 
-          }
-        ]
-      },
-        { 
-        id: 303, 
-        name: "YUTAKA SRT PUTIH", 
-        category: "SARUNG TANGAN", 
-        priceDisplay: "80RB AN",
-        minPrice: 80000,
-        maxPrice: 80000,
-        isBestSeller: true, 
-        desc: "SARUNG TANGAN",
-        mainImg: "img/YUTAKA_SRT_PT.jpg",
-        variants: [
-          { 
-            name: "YUTAKA SRT PUTIH", 
-            img: "img/YUTAKA_SRT_PT.jpg",
-            subVariants: ["FREE SIZE"] 
-          }
         ]
       },
       { 
@@ -1007,7 +1292,7 @@
           ]
       },
           { 
-        id: 414, 
+        id: 416, 
         name: "YUTAKA JPL TIPIS", 
         category: "MUSLIM", 
         isBestSeller: true, 
@@ -1028,6 +1313,290 @@
             name: "YUTAKA JPL TIPIS AS CREAM", 
             img: "img/YUTAKA_TIPIS_AS.jpg",
             subVariants: ["Ukuran S", "Ukuran M", "Ukuran L"] 
+          },
+        ]
+      },
+      { 
+        id: 301, 
+        name: "YUTAKA SRT HITAM", 
+        category: "SRT", 
+        priceDisplay: "80RB AN",
+        minPrice: 80000,
+        maxPrice: 80000,
+        isBestSeller: true, 
+        desc: "SARUNG TANGAN",
+        mainImg: "img/YUTAKA_SRT_HT.jpg",
+        variants: [
+          { 
+            name: "YUTAKA SRT HITAM", 
+            img: "img/YUTAKA_SRT_HT.jpg",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "YUTAKA SRT HITAM 1/2 JARI", 
+            img: "img/YUTAKA_SRT_HT_1.2.jpg",
+            subVariants: ["FREE SIZE"] 
+          }
+        ]
+      },
+      { 
+        id: 302, 
+        name: "YUTAKA SRT MISTY", 
+        category: "SRT", 
+        priceDisplay: "80RB AN",
+        minPrice: 80000,
+        maxPrice: 80000,
+        isBestSeller: true, 
+        desc: "SARUNG TANGAN",
+        mainImg: "img/YUTAKA_SRT_MISTI.png",
+        variants: [
+          { 
+            name: "YUTAKA SRT MISTY", 
+            img: "img/YUTAKA_SRT_MISTI.png",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "YUTAKA SRT MISTY 1/2 JARI", 
+            img: "img/YUTAKA_SRT_MISTI1.2.png",
+            subVariants: ["FREE SIZE"] 
+          }
+        ]
+      },
+        { 
+        id: 303, 
+        name: "YUTAKA SRT PUTIH", 
+        category: "SRT", 
+        priceDisplay: "80RB AN",
+        minPrice: 80000,
+        maxPrice: 80000,
+        isBestSeller: true, 
+        desc: "SARUNG TANGAN",
+        mainImg: "img/YUTAKA_SRT_PT.jpg",
+        variants: [
+          { 
+            name: "YUTAKA SRT PUTIH", 
+            img: "img/YUTAKA_SRT_PT.jpg",
+            subVariants: ["FREE SIZE"] 
+          }
+        ]
+      },
+                 { 
+        id: 201, 
+        name: "YUTAKA MANSET", 
+        category: "HANDSOCK",
+        priceDisplay: "70RB AN",
+        minPrice: 73000,
+        maxPrice: 73000, 
+        isBestSeller: true, 
+        desc: "MANSET TANGAN.",
+        mainImg: "img/YUTAKA_MANSET_HITAM.png",
+        variants: [
+          { 
+            name: "YUTAKA MANSET HITAM", 
+            img: "img/YUTAKA_MANSET_HITAM.png",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "YUTAKA MANSET PUTIH", 
+            img: "img/YUTAKA_MANSET_PT.png",
+            subVariants: ["FREE SIZE"] 
+          },
+          { 
+            name: "YUTAKA MANSET COKLAT", 
+            img: "img/YUTAKA_MANSET_CK.png",
+            subVariants: ["FREE SIZE"] 
+          }
+        ]
+      },
+      { 
+        id: 202, 
+        name: "JAMIILATUN HANDSOCKS", 
+        category: "HANDSOCK", 
+        priceDisplay: "50RB AN",
+        minPrice: 55000,
+        maxPrice: 55000,
+        isBestSeller: true, 
+        desc: "HANDSOCKS.",
+        mainImg: "img/JAMIILATUN_HDS_PT.png",
+        variants: [
+          { 
+            name: "JAMIILATUN HDS PUTIH", 
+            img: "img/JAMIILATUN_HDS_PT.png",
+            subVariants: ["Free Size"] 
+          },
+          { 
+            name: "JAMIILATUN HDS HITAM", 
+            img: "img/JAMIILATUN_HDS_HT.png",
+            subVariants: ["Free Size"] 
+          },
+          { 
+            name: "JAMIILATUN HDS CREAM", 
+            img: "img/JAMIILATUN_HDS_CR.png",
+            subVariants: ["Free Size"] 
+          }
+        ]
+      },
+      { 
+        id: 203, 
+        name: "YUTAKA HDS 2 TONE", 
+        category: "HANDSOCK",
+        priceDisplay: "60RB AN",
+        minPrice: 60000,
+        maxPrice: 68000, 
+        isBestSeller: false, 
+        desc: "MANSET TANGAN.",
+        mainImg: "img/YUTAKA_2TONE.jpeg",
+        variants: [
+          { 
+            name: "YUTAKA HDS 2TONE", 
+            img: "img/YUTAKA_2TONE.jpeg",
+            subVariants: ["CREAM & HITAM"] 
+          },
+          { 
+            name: "YUTAKA HDS 2TONE WARNA", 
+            img: "img/YUTAKA_2TONE_WR.png",
+            subVariants: ["Campur Warna"] 
+          },
+        ]
+      },
+      { 
+        id: 204, 
+        name: "FINI HANDSOCK FLIP", 
+        category: "HANDSOCK",
+        priceDisplay: "80RB AN",
+        minPrice: 80000,
+        maxPrice: 88000, 
+        isBestSeller: false, 
+        desc: "MANSET TANGAN.",
+        mainImg: "img/FINI_FLIP.jpeg",
+        variants: [
+          { 
+            name: "FINI HANDSOCK FLIP", 
+            img: "img/FINI_FLIP.jpeg",
+            subVariants: ["CREAM & HITAM"] 
+          },
+          { 
+            name: "FINI HANDSOCK FLIP WARNA", 
+            img: "img/FINI_FLIP_WR.png",
+            subVariants: ["Campur Warna"] 
+          },
+        ]
+      },
+      { 
+        id: 205, 
+        name: "FINI HANDSOCK POLOS", 
+        category: "HANDSOCK",
+        priceDisplay: "160RB AN",
+        minPrice: 160000,
+        maxPrice: 168000, 
+        isBestSeller: true, 
+        desc: "MANSET TANGAN.",
+        mainImg: "img/FINI_HDS_POLOS.jpeg",
+        variants: [
+          { 
+            name: "FINI HANDSOCK NYLON", 
+            img: "img/FINI_HDS_POLOS.jpeg",
+            subVariants: ["CREAM","HITAM"] 
+          },
+        ]
+      },
+      { 
+        id: 206, 
+        name: "FINI HANDSOCK JPL", 
+        category: "HANDSOCK",
+        priceDisplay: "130RB AN",
+        minPrice: 130000,
+        maxPrice: 160000, 
+        isBestSeller: true, 
+        desc: "MANSET TANGAN.",
+        mainImg: "img/FINI_HDS_[L]_JPL.png",
+        variants: [
+          { 
+            name: "FINI HANDSOCK [L] JPL", 
+            img: "img/FINI_HDS_[L]_JPL.png",
+            subVariants: ["CREAM","HITAM"] 
+          },
+          { 
+            name: "FINI HANDSOCK [S] JPL", 
+            img: "img/FINI_HDS_[S]_JPL.jpeg",
+            subVariants: ["CREAM","HITAM"] 
+          },
+        ]
+      },
+      { 
+        id: 207, 
+        name: "FINI HANDSOCK [S] BUNGA DALAM", 
+        category: "HANDSOCK",
+        priceDisplay: "110RB AN",
+        minPrice: 110000,
+        maxPrice: 110000, 
+        isBestSeller: true, 
+        desc: "MANSET TANGAN.",
+        mainImg: "img/FINI_HDS_[S]_B.DLM.jpeg",
+        variants: [
+          { 
+            name: "FINI HANDSOCK [S] BUNGA DALAM HITAM", 
+            img: "img/FINI_HDS_[S]_B.DLM.jpeg",
+            subVariants: ["S"] 
+          },
+          { 
+            name: "FINI HANDSOCK [S] BUNGA DALAM CREAM", 
+            img: "img/FINI_HDS_[S]_B.DLM_CR.jpg",
+            subVariants: ["S"] 
+          },
+        ]
+      },
+      { 
+        id: 208, 
+        name: "FINI HANDSOCK [S] KERUT", 
+        category: "HANDSOCK",
+        priceDisplay: "110RB AN",
+        minPrice: 110000,
+        maxPrice: 110000, 
+        isBestSeller: true, 
+        desc: "MANSET TANGAN.",
+        mainImg: "img/FINI_HDS_[S]_KERUT.jpeg",
+        variants: [
+          { 
+            name: "FINI HANDSOCK [S] KERUT", 
+            img: "img/FINI_HDS_[S]_KERUT.jpeg",
+            subVariants: ["CREAM","HITAM"] 
+          },
+        ]
+      },
+      { 
+        id: 209, 
+        name: "FINI SRT [L] LACE", 
+        category: "HANDSOCK",
+        priceDisplay: "180RB AN",
+        minPrice: 180000,
+        maxPrice: 180000, 
+        isBestSeller: true, 
+        desc: "MANSET TANGAN.",
+        mainImg: "img/FINI_SRT_[L]_LACE.png",
+        variants: [
+          { 
+            name: "FINI SRT [L] LACE", 
+            img: "img/FINI_SRT_[L]_LACE.png",
+            subVariants: ["PUTIH","HITAM"] 
+          },
+        ]
+      },
+      { 
+        id: 210, 
+        name: "FINI HANDSOCK NYLON", 
+        category: "HANDSOCK",
+        priceDisplay: "100RB AN",
+        minPrice: 100000,
+        maxPrice: 108000, 
+        isBestSeller: true, 
+        desc: "MANSET TANGAN.",
+        mainImg: "img/FINI_HDS_NYLON.png",
+        variants: [
+          { 
+            name: "FINI HANDSOCK NYLON", 
+            img: "img/FINI_HDS_NYLON.jpeg",
+            subVariants: ["CREAM","HITAM"] 
           },
         ]
       },
@@ -1133,7 +1702,7 @@
             <img src="${cat.img}" onerror="this.src='https://via.placeholder.com/40'" class="w-10 h-10 object-contain rounded-full border bg-slate-50 p-1 group-hover:scale-105 transition">
             <span class="font-bold text-xs text-slate-800 group-hover:text-blue-900">${cat.name}</span>
           </div>
-          <span class="text-slate-400 group-hover:text-blue-600 font-black text-sm">›</span>
+          <span class="text-slate-400 group-hover:text-blue-600 font-black text-sm"></span>
         </div>
       `).join('');
     }
@@ -1213,15 +1782,15 @@
       slider.innerHTML = bestSellerProducts.map(p => {
         const orderedTotal = getProductOrderedTotal(p.id);
         return `
-          <div onclick="openProductDetail(${p.id})" class="bg-white rounded-xl p-2 shadow-sm border border-amber-200 hover:border-amber-400 transition-all cursor-pointer flex flex-col justify-between shrink-0 w-36 relative group">
+          <div onclick="openProductDetail(${p.id})" class="bg-white rounded-xl p-2 shadow-sm border border-amber-200 hover:border-amber-400 transition-all cursor-pointer flex flex-col justify-between shrink-0 w-32 relative group">
             ${orderedTotal > 0 ? `<span class="absolute top-1.5 right-1.5 bg-blue-600 text-white text-[9px] font-black px-1.5 py-0.2 rounded-full shadow z-10">${orderedTotal} Lsn</span>` : ''}
             <div class="relative w-full h-24 bg-white rounded-lg p-0.5 flex items-center justify-center overflow-hidden border border-slate-100">
-              <img src="${p.mainImg}" onerror="this.src='https://via.placeholder.com/150?text=${encodeURIComponent(p.name)}'" class="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105">
+              <img src="${p.mainImg}" onerror="this.src='https://via.placeholder.com/150?text=${encodeURIComponent(p.name)}'" class="w-full h-full object-contain p-1 rounded transition-transform duration-300 group-hover:scale-105">
               <span class="absolute top-1 left-1 bg-amber-500 text-white text-[7px] font-bold px-1 rounded shadow">★ Best</span>
             </div>
             <div class="pt-1.5 text-center">
               <h4 class="font-bold text-[11px] text-slate-800 truncate">${p.name}</h4>
-              <span class="text-[10px] font-black text-rose-600 block">${p.priceDisplay}</span>
+              <span class="text-[10px] font-black text-rose-600 block">${p.priceDisplay || '-'}</span>
             </div>
           </div>
         `;
@@ -1236,9 +1805,9 @@
       if (currentCategory !== "Semua") filtered = filtered.filter(p => p.category === currentCategory);
       if (keyword) filtered = filtered.filter(p => p.name.toLowerCase().includes(keyword));
 
-      if (currentFilterTag === 'obral') filtered = filtered.filter(p => p.minPrice < 45000);
-      else if (currentFilterTag === 'standar') filtered = filtered.filter(p => p.minPrice >= 45000 && p.maxPrice <= 52000);
-      else if (currentFilterTag === 'premium') filtered = filtered.filter(p => p.maxPrice > 52000);
+      if (currentFilterTag === 'obral') filtered = filtered.filter(p => p.minPrice < 50000);
+      else if (currentFilterTag === 'standar') filtered = filtered.filter(p => p.minPrice >= 50000 && p.maxPrice <= 100000);
+      else if (currentFilterTag === 'premium') filtered = filtered.filter(p => p.maxPrice > 100000);
       else if (currentFilterTag === 'terlaris') filtered = filtered.filter(p => p.isBestSeller);
 
       if (filtered.length === 0) {
@@ -1248,20 +1817,22 @@
 
       grid.innerHTML = filtered.map(p => {
         const orderedTotal = getProductOrderedTotal(p.id);
+        const displayPrice = p.priceDisplay ? p.priceDisplay : 'Lihat Detail';
+
         return `
-          <div onclick="openProductDetail(${p.id})" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 flex flex-col justify-between relative group cursor-pointer transition">
+          <div onclick="openProductDetail(${p.id})" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-slate-200 flex flex-col justify-between relative group cursor-pointer transition w-full">
             ${orderedTotal > 0 ? `<span class="absolute top-1.5 left-1.5 bg-blue-600 text-white text-[9px] font-black px-1.5 py-0.2 rounded-full shadow-md z-10">${orderedTotal} Lsn</span>` : ''}
-            <div class="relative w-full aspect-[4/5] bg-slate-50 flex items-center justify-center overflow-hidden">
-              <img src="${p.mainImg}" onerror="this.src='https://via.placeholder.com/250x300?text=${encodeURIComponent(p.name)}'" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div class="relative w-full aspect-[4/3] bg-slate-50 flex items-center justify-center overflow-hidden p-1 border-b border-slate-100">
+              <img src="${p.mainImg}" onerror="this.src='https://via.placeholder.com/250x300?text=${encodeURIComponent(p.name)}'" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
               ${p.isBestSeller ? '<span class="absolute top-1.5 right-1.5 bg-amber-500 text-white text-[7px] font-black px-1 rounded shadow">★ BEST</span>' : ''}
             </div>
             <div class="p-2 flex flex-col justify-between flex-1">
               <div>
-                <h3 class="font-semibold text-[11px] sm:text-xs text-slate-800 line-clamp-2 leading-tight">${p.name}</h3>
+                <h3 class="font-bold text-[11px] sm:text-xs text-slate-800 line-clamp-2 leading-tight">${p.name}</h3>
                 <p class="text-[9px] text-slate-400 font-medium mt-0.5">${p.category}</p>
               </div>
-              <div class="mt-1.5 flex items-center justify-between">
-                <span class="text-[11px] font-black text-rose-600">${p.priceDisplay}</span>
+              <div class="mt-2 flex items-center justify-between border-t pt-1.5">
+                <span class="text-[11px] font-black text-rose-600">${displayPrice}</span>
                 <span class="text-[9px] ${orderedTotal > 0 ? 'text-emerald-700 font-bold' : 'text-blue-600 font-bold'}">${orderedTotal > 0 ? `✔ ${orderedTotal} Lsn` : 'Pilih ➔'}</span>
               </div>
             </div>
@@ -1289,27 +1860,30 @@
       }, 50);
     }
 
+    /* RENDER POPUP MODAL - GAMBAR MEMENUHI BINGKAI SECARA FULL DENGAN OBJECT-COVER */
     function renderFullProductVariantCards() {
       const container = document.getElementById('variant-slider-container');
       const p = activeProductForDetail;
 
       container.innerHTML = p.variants.map((v) => {
+        const cleanVarName = v.name.replace(/[^a-zA-Z0-0]/g, '-');
         let sizesHTML = '';
+
         if (v.subVariants && v.subVariants.length > 0) {
           sizesHTML = v.subVariants.map(sizeName => {
             const fullKey = `${v.name} - ${sizeName}`;
             const qty = modalVariantQuantities[fullKey] || 0;
             const isSelected = qty > 0;
             return `
-              <div onclick="toggleVariantSelection('${fullKey}')" class="p-1.5 rounded-lg border transition flex items-center justify-between cursor-pointer select-none ${isSelected ? 'bg-blue-50 border-blue-600 shadow-sm' : 'bg-white border-slate-200 hover:bg-slate-50'}">
+              <div onclick="toggleVariantSelection('${fullKey}')" class="p-2 rounded-xl border transition flex items-center justify-between cursor-pointer select-none ${isSelected ? 'bg-blue-50 border-blue-600 shadow-sm' : 'bg-white border-slate-200 hover:bg-slate-50'}">
                 <div class="flex items-center gap-1.5">
-                  <span class="font-black text-[11px] ${isSelected ? 'text-blue-900' : 'text-slate-800'}">${sizeName}</span>
+                  <span class="font-black text-xs ${isSelected ? 'text-blue-900' : 'text-slate-800'}">${sizeName}</span>
                   <span class="text-[9px] ${isSelected ? 'text-blue-600 font-bold' : 'text-slate-400'}">${isSelected ? '✔ Terpilih' : 'Pilih'}</span>
                 </div>
-                <div class="flex items-center gap-1" onclick="event.stopPropagation()">
-                  <button onclick="changeModalVariantQty('${fullKey}', -1)" class="w-5 h-5 bg-slate-100 border font-extrabold text-slate-700 rounded hover:bg-slate-200 active:scale-95 text-[10px] flex items-center justify-center">-</button>
-                  <span class="w-5 text-center text-[11px] font-black text-blue-800">${qty}</span>
-                  <button onclick="changeModalVariantQty('${fullKey}', 1)" class="w-5 h-5 bg-blue-600 font-extrabold text-white rounded hover:bg-blue-700 active:scale-95 text-[10px] flex items-center justify-center">+</button>
+                <div class="flex items-center gap-1.5" onclick="event.stopPropagation()">
+                  <button onclick="changeModalVariantQty('${fullKey}', -1)" class="w-6 h-6 bg-slate-100 border font-extrabold text-slate-700 rounded-lg hover:bg-slate-200 active:scale-95 text-xs flex items-center justify-center">-</button>
+                  <span class="w-6 text-center text-xs font-black text-blue-800">${qty}</span>
+                  <button onclick="changeModalVariantQty('${fullKey}', 1)" class="w-6 h-6 bg-blue-600 font-extrabold text-white rounded-lg hover:bg-blue-700 active:scale-95 text-xs flex items-center justify-center">+</button>
                 </div>
               </div>
             `;
@@ -1319,15 +1893,15 @@
           const qty = modalVariantQuantities[fullKey] || 0;
           const isSelected = qty > 0;
           sizesHTML = `
-            <div onclick="toggleVariantSelection('${fullKey}')" class="p-1.5 rounded-lg border transition flex items-center justify-between cursor-pointer select-none ${isSelected ? 'bg-blue-50 border-blue-600 shadow-sm' : 'bg-white border-slate-200 hover:bg-slate-50'}">
+            <div onclick="toggleVariantSelection('${fullKey}')" class="p-2 rounded-xl border transition flex items-center justify-between cursor-pointer select-none ${isSelected ? 'bg-blue-50 border-blue-600 shadow-sm' : 'bg-white border-slate-200 hover:bg-slate-50'}">
               <div class="flex items-center gap-1.5">
-                <span class="font-black text-[11px] ${isSelected ? 'text-blue-900' : 'text-slate-800'}">${v.name}</span>
+                <span class="font-black text-xs ${isSelected ? 'text-blue-900' : 'text-slate-800'}">${v.name}</span>
                 <span class="text-[9px] ${isSelected ? 'text-blue-600 font-bold' : 'text-slate-400'}">${isSelected ? '✔ Terpilih' : 'Pilih'}</span>
               </div>
-              <div class="flex items-center gap-1" onclick="event.stopPropagation()">
-                <button onclick="changeModalVariantQty('${fullKey}', -1)" class="w-5 h-5 bg-slate-100 border font-extrabold text-slate-700 rounded hover:bg-slate-200 active:scale-95 text-[10px] flex items-center justify-center">-</button>
-                <span class="w-5 text-center text-[11px] font-black text-blue-800">${qty}</span>
-                <button onclick="changeModalVariantQty('${fullKey}', 1)" class="w-5 h-5 bg-blue-600 font-extrabold text-white rounded hover:bg-blue-700 active:scale-95 text-[10px] flex items-center justify-center">+</button>
+              <div class="flex items-center gap-1.5" onclick="event.stopPropagation()">
+                <button onclick="changeModalVariantQty('${fullKey}', -1)" class="w-6 h-6 bg-slate-100 border font-extrabold text-slate-700 rounded-lg hover:bg-slate-200 active:scale-95 text-xs flex items-center justify-center">-</button>
+                <span class="w-6 text-center text-xs font-black text-blue-800">${qty}</span>
+                <button onclick="changeModalVariantQty('${fullKey}', 1)" class="w-6 h-6 bg-blue-600 font-extrabold text-white rounded-lg hover:bg-blue-700 active:scale-95 text-xs flex items-center justify-center">+</button>
               </div>
             </div>
           `;
@@ -1335,25 +1909,30 @@
 
         return `
           <div class="variant-full-card-slide p-1">
-            <div class="bg-white rounded-3xl p-3.5 shadow-2xl border border-slate-200 space-y-2.5 relative max-h-[85vh] overflow-y-auto custom-scroll">
+            <div id="modal-card-scroll-${cleanVarName}" class="bg-white rounded-3xl p-4 shadow-2xl border border-slate-200 space-y-3 relative max-h-[92vh] overflow-y-auto custom-scroll">
               <button onclick="closeProductModal()" class="absolute top-3 right-3 bg-slate-100 hover:bg-slate-200 w-7 h-7 rounded-full font-black text-slate-700 flex items-center justify-center z-10 text-xs">✕</button>
               <div>
-                <span class="bg-blue-50 text-blue-700 text-[10px] px-2 py-0.5 rounded-full font-bold">${p.category}</span>
-                <h2 class="font-black text-base text-slate-900 mt-0.5">${p.name}</h2>
+                <span class="bg-blue-50 text-blue-700 text-[10px] px-2.5 py-0.5 rounded-full font-bold">${p.category}</span>
+                <h2 class="font-black text-base text-slate-900 mt-1">${p.name}</h2>
               </div>
-              <div class="bg-slate-50 p-1.5 rounded-xl border border-slate-200 flex flex-col items-center justify-center overflow-hidden">
-                <div class="w-full h-36 rounded-lg overflow-hidden bg-white border shadow-sm">
+              
+              <!-- BINGKAI FOTO: TANPA PADDING, OBJECT-COVER AGAR PURNAMA MEMENUHI BINGKAI -->
+              <div class="bg-slate-100 rounded-2xl border border-slate-200 overflow-hidden shadow-inner flex flex-col items-center">
+                <div class="w-full aspect-[16/10] bg-white overflow-hidden flex items-center justify-center">
                   <img src="${v.img}" onerror="this.src='https://via.placeholder.com/300?text=${encodeURIComponent(v.name)}'" class="w-full h-full object-cover">
                 </div>
-                <span class="text-[10px] font-black text-slate-800 mt-1 bg-white px-2 py-0.5 rounded-full border uppercase shadow-sm">${v.name}</span>
+                <span class="text-[11px] font-black text-slate-800 my-1.5 bg-white px-3 py-0.5 rounded-full border uppercase shadow-sm">${v.name}</span>
               </div>
-              <div class="bg-slate-50 p-2 rounded-xl border border-slate-200 space-y-1.5">
-                <label class="block text-[10px] font-bold text-blue-900 uppercase">PILIH UKURAN:</label>
-                <div class="max-h-28 overflow-y-auto space-y-1 pr-0.5 custom-scroll">${sizesHTML}</div>
+
+              <div class="bg-slate-50 p-2.5 rounded-2xl border border-slate-200 space-y-2">
+                <label class="block text-[10px] font-bold text-blue-900 uppercase tracking-wider">PILIH UKURAN / VARIAN:</label>
+                <!-- WADAH SCROLL UKURAN DENGAN ID KHUSUS -->
+                <div id="sizes-scroll-${cleanVarName}" class="max-h-48 overflow-y-auto space-y-1.5 pr-0.5 custom-scroll">${sizesHTML}</div>
               </div>
-              <div class="flex gap-2 pt-0.5">
-                <button onclick="askProductVariantViaWA()" class="flex-1 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-bold py-2.5 px-2 rounded-xl shadow text-[11px] transition flex items-center justify-center gap-1 border border-emerald-400"><span>💬</span> WA CS</button>
-                <button onclick="saveMultipleVariantsToCart()" class="flex-[2] bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold py-2.5 px-2 rounded-xl shadow text-[11px] transition flex items-center justify-center gap-1"><span>🛒</span> SIMPAN KERANJANG</button>
+
+              <div class="flex gap-2 pt-1">
+                <button onclick="askProductVariantViaWA()" class="flex-1 bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-white font-bold py-3 px-2 rounded-xl shadow text-xs transition flex items-center justify-center gap-1 border border-emerald-400"><span>💬</span> WA CS</button>
+                <button onclick="saveMultipleVariantsToCart()" class="flex-[2] bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-bold py-3 px-2 rounded-xl shadow text-xs transition flex items-center justify-center gap-1"><span>🛒</span> SIMPAN KERANJANG</button>
               </div>
             </div>
           </div>
@@ -1376,15 +1955,46 @@
       container.scrollTo({ left: currentVariantIndex * container.clientWidth, behavior: 'smooth' });
     }
 
+    /* KUNCI POSISI SCROLL KHUSUS WADAH UKURAN DENGAN AKURAT */
     function toggleVariantSelection(fullKey) {
+      const activeVariant = activeProductForDetail.variants[currentVariantIndex];
+      const cleanVarName = activeVariant.name.replace(/[^a-zA-Z0-0]/g, '-');
+      
+      const sizesElem = document.getElementById(`sizes-scroll-${cleanVarName}`);
+      const cardElem = document.getElementById(`modal-card-scroll-${cleanVarName}`);
+      
+      const currentSizesScroll = sizesElem ? sizesElem.scrollTop : 0;
+      const currentCardScroll = cardElem ? cardElem.scrollTop : 0;
+
       modalVariantQuantities[fullKey] = (modalVariantQuantities[fullKey] || 0) > 0 ? 0 : 1;
       renderFullProductVariantCards();
+
+      const newSizesElem = document.getElementById(`sizes-scroll-${cleanVarName}`);
+      const newCardElem = document.getElementById(`modal-card-scroll-${cleanVarName}`);
+      
+      if (newSizesElem) newSizesElem.scrollTop = currentSizesScroll;
+      if (newCardElem) newCardElem.scrollTop = currentCardScroll;
     }
 
     function changeModalVariantQty(fullKey, delta) {
+      const activeVariant = activeProductForDetail.variants[currentVariantIndex];
+      const cleanVarName = activeVariant.name.replace(/[^a-zA-Z0-0]/g, '-');
+      
+      const sizesElem = document.getElementById(`sizes-scroll-${cleanVarName}`);
+      const cardElem = document.getElementById(`modal-card-scroll-${cleanVarName}`);
+      
+      const currentSizesScroll = sizesElem ? sizesElem.scrollTop : 0;
+      const currentCardScroll = cardElem ? cardElem.scrollTop : 0;
+
       let current = (modalVariantQuantities[fullKey] || 0) + delta;
       modalVariantQuantities[fullKey] = current < 0 ? 0 : current;
       renderFullProductVariantCards();
+
+      const newSizesElem = document.getElementById(`sizes-scroll-${cleanVarName}`);
+      const newCardElem = document.getElementById(`modal-card-scroll-${cleanVarName}`);
+      
+      if (newSizesElem) newSizesElem.scrollTop = currentSizesScroll;
+      if (newCardElem) newCardElem.scrollTop = currentCardScroll;
     }
 
     function askProductVariantViaWA() {
@@ -1461,7 +2071,7 @@
       }
       cartContainer.innerHTML = cart.map(item => `
         <div class="flex items-center justify-between bg-slate-50 p-2.5 rounded-xl border border-slate-200">
-          <img src="${item.img}" onerror="this.src='https://via.placeholder.com/50'" class="w-10 h-10 object-contain rounded-lg bg-white border p-0.5 mr-2">
+          <img src="${item.img}" onerror="this.src='https://via.placeholder.com/50'" class="w-10 h-10 object-contain p-0.5 rounded-lg bg-white border mr-2">
           <div class="flex-1 pr-2">
             <h4 class="font-bold text-xs text-slate-800">${item.name}</h4>
             <p class="text-[9px] text-blue-600 font-semibold">${item.category}</p>
@@ -1543,7 +2153,7 @@
       document.getElementById('detail-bon-date').innerText = `Waktu: ${tx.date}`;
       document.getElementById('detail-bon-body').innerHTML = tx.items.map(item => `
         <tr>
-          <td class="p-2"><img src="${item.img}" onerror="this.src='https://via.placeholder.com/40'" class="w-7 h-7 object-contain rounded border"></td>
+          <td class="p-2"><img src="${item.img}" onerror="this.src='https://via.placeholder.com/40'" class="w-7 h-7 object-contain p-0.5 rounded border"></td>
           <td class="p-2 font-bold text-slate-800">${item.name}</td>
           <td class="p-2 text-center font-bold text-blue-600">${item.qty} Lusin</td>
         </tr>
